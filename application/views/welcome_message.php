@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!DOCTYPE html>
 <html>
 <head>
-<title>Best Store a Ecommerce Online Shopping Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
+<title>Puma Hearing Aid | Home :: w3layouts</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -44,26 +44,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 			<div class="header-grid">
 				<div class="header-grid-left animated wow slideInLeft" data-wow-delay=".5s">
-					<ul>
+					<!--<ul>
 						<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">@example.com</a></li>
 						<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 567 892</li>
 						<li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="login.html">Login</a></li>
 						<li><i class="glyphicon glyphicon-book" aria-hidden="true"></i><a href="register.html">Register</a></li>
-					</ul>
+					</ul>-->
 				</div>
-				<div class="header-grid-right animated wow slideInRight" data-wow-delay=".5s">
+				<!--<div class="header-grid-right animated wow slideInRight" data-wow-delay=".5s">
 					<ul class="social-icons">
 						<li><a href="#" class="facebook"></a></li>
 						<li><a href="#" class="twitter"></a></li>
 						<li><a href="#" class="g"></a></li>
 						<li><a href="#" class="instagram"></a></li>
 					</ul>
-				</div>
+				</div>-->
 				<div class="clearfix"> </div>
 			</div>
 			<div class="logo-nav">
 				<div class="logo-nav-left animated wow zoomIn" data-wow-delay=".5s">
-					<h1><a href="index.html">Best Store <span>Shop anywhere</span></a></h1>
+					<h1><a href="index.html">P   u   m   a <span>Hearing Aid</span></a></h1>
 				</div>
 				<div class="logo-nav-left1">
 					<nav class="navbar navbar-default">
@@ -120,7 +120,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									</div>
 								</ul>
 							</li>
-							<li class="dropdown">
+							<!--<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Furniture <b class="caret"></b></a>
 								<ul class="dropdown-menu multi-column columns-3">
 									<div class="row">
@@ -157,9 +157,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<div class="clearfix"></div>
 									</div>
 								</ul>
-							</li>
-							<li><a href="short-codes.html">Short Codes</a></li>
-							<li><a href="mail.html">Mail Us</a></li>
+							</li>-->
+							<li><a href="aboutus.html">About Us</a></li>
 						</ul>
 					</div>
 					</nav>
@@ -203,7 +202,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="banner">
 		<div class="container">
 			<div class="banner-info animated wow zoomIn" data-wow-delay=".5s">
-				<h3>Free Online Shopping</h3>
+				<h3>Hearing Aid for <br>Hearing Loss</br></h3>
 				<h4>Up to <span>50% <i>Off/-</i></span></h4>
 				<div class="wmuSlider example1">
 					<div class="wmuSliderWrapper">
@@ -295,9 +294,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- collections -->
 	<div class="new-collections">
 		<div class="container">
-			<h3 class="animated wow zoomIn" data-wow-delay=".5s">New Collections</h3>
-			<p class="est animated wow zoomIn" data-wow-delay=".5s">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
-				deserunt mollit anim id est laborum.</p>
+			<h3 class="animated wow zoomIn" data-wow-delay=".5s">Best Selling</h3>
+			<p class="est animated wow zoomIn" data-wow-delay=".5s"></p>
 			<div class="new-collections-grids">
 				<div class="col-md-3 new-collections-grid">
 					<div class="new-collections-grid1 animated wow slideInUp" data-wow-delay=".5s">
@@ -556,7 +554,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 			<div class="timer-grids">
 				<div class="col-md-8 timer-grid-left animated wow slideInLeft" data-wow-delay=".5s">
-					<h3><a href="products.html">sunt in culpa qui officia deserunt mollit</a></h3>
+					<h3><a href="products.html"></a></h3>
 					<div class="rating">
 						<div class="rating-left">
 							<img src="images/2.png" alt=" " class="img-responsive" />
@@ -576,12 +574,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="clearfix"> </div>
 					</div>
 					<div class="new-collections-grid1-left simpleCart_shelfItem timer-grid-left-price">
-						<p><i>$580</i> <span class="item_price">$550</span></p>
-						<h4>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
-							nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit 
-							qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui 
-							dolorem eum fugiat quo voluptas nulla pariatur.</h4>
-						<p><a class="item_add timer_add" href="#">add to cart </a></p>
+						<p><i></i> <span class="item_price"></span></p>
+						<h4></h4>
+						<!--<p><a class="item_add timer_add" href="#">add to cart </a></p>-->
 					</div>
 					<div id="counter"> </div>
 					<script src="js/jquery.countdown.js"></script>
@@ -605,17 +600,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 			<div class="collections-bottom-grids">
 				<div class="collections-bottom-grid animated wow slideInLeft" data-wow-delay=".5s">
-					<h3>45% Offer For <span>Women & Children's</span></h3>
+					<h3>45% Discount <span>for new products</span></h3>
 				</div>
-			</div>
-			<div class="newsletter animated wow slideInUp" data-wow-delay=".5s">
-				<h3>Newsletter</h3>
-				<p>Join us now to get all news and special offers.</p>
-				<form>
-					<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-					<input type="email" value="Enter your email address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter your email address';}" required="">
-					<input type="submit" value="Join Us" >
-				</form>
 			</div>
 		</div>
 	</div>
@@ -626,19 +612,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="footer-grids">
 				<div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".5s">
 					<h3>About Us</h3>
-					<p>Duis aute irure dolor in reprehenderit in voluptate velit esse.<span>Excepteur sint occaecat cupidatat 
-						non proident, sunt in culpa qui officia deserunt mollit.</span></p>
+					<p>Klinik pengobatan dan perawatan penyakit pendengaran<span>Kami juga menyediakan produk alat bantu dengar dengan pembelian online maupun di klinik kami</span></p>
 				</div>
 				<div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".6s">
 					<h3>Contact Info</h3>
 					<ul>
-						<li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>1234k Avenue, 4th block, <span>New York City.</span></li>
-						<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">info@example.com</a></li>
-						<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 567 567</li>
+						<li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Surabaya, <span>Indonesia.</span></li>
+						<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">pumahearing@gmail.com</a></li>
+						<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+62 89621311021</li>
 					</ul>
 				</div>
 				<div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".7s">
-					<h3>Flickr Posts</h3>
 					<div class="footer-grid-left">
 						<a href="single.html"><img src="images/13.jpg" alt=" " class="img-responsive" /></a>
 					</div>
@@ -677,36 +661,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<div class="clearfix"> </div>
 				</div>
-				<div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".8s">
-					<h3>Blog Posts</h3>
-					<div class="footer-grid-sub-grids">
-						<div class="footer-grid-sub-grid-left">
-							<a href="single.html"><img src="images/9.jpg" alt=" " class="img-responsive" /></a>
-						</div>
-						<div class="footer-grid-sub-grid-right">
-							<h4><a href="single.html">culpa qui officia deserunt</a></h4>
-							<p>Posted On 25/3/2016</p>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-					<div class="footer-grid-sub-grids">
-						<div class="footer-grid-sub-grid-left">
-							<a href="single.html"><img src="images/10.jpg" alt=" " class="img-responsive" /></a>
-						</div>
-						<div class="footer-grid-sub-grid-right">
-							<h4><a href="single.html">Quis autem vel eum iure</a></h4>
-							<p>Posted On 25/3/2016</p>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-				</div>
+				
 				<div class="clearfix"> </div>
 			</div>
 			<div class="footer-logo animated wow slideInUp" data-wow-delay=".5s">
-				<h2><a href="index.html">Best Store <span>shop anywhere</span></a></h2>
+				<h2><a href="index.html">Puma <span>Hearing Aid</span></a></h2>
 			</div>
 			<div class="copy-right animated wow slideInUp" data-wow-delay=".5s">
-				<p>&copy 2016 Best Store. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+				<p>&copy 2017 Puma Hearing Aid. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
 			</div>
 		</div>
 	</div>
