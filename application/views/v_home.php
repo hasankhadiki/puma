@@ -16,13 +16,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href="<?php echo base_url('assets/css/bootstrap.css');?>" rel="stylesheet" type="text/css" media="all" />
 <link href="<?php echo base_url('assets/css/style.css');?>" rel="stylesheet" type="text/css" media="all" />
 <!-- js -->
-<script src="js/jquery.min.js"></script>
+<script src="<?php echo base_url('assets/js/jquery.min.js');?>"> </script>
 <!-- //js -->
 <!-- cart -->
-<script src="js/simpleCart.min.js"></script>
+<script src="<?php echo base_url();?>assets/js/simpleCart.min.js"></script>
 <!-- cart -->
 <!-- for bootstrap working -->
-<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>assets/js/bootstrap-3.1.1.min.js"></script>
 <!-- //for bootstrap working -->
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
@@ -30,8 +30,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link rel="stylesheet" href=”<?php echo base_url('assets/css/jquery.countdown.css');?>” />
 <!-- //timer -->
 <!-- animation-effect -->
-<link href="css/animate.min.css" rel="stylesheet"> 
-<script src="js/wow.min.js"></script>
+<link href="<?php echo base_url();?>assets/css/animate.min.css" rel="stylesheet"> 
+<script src="<?php echo base_url();?>assets/js/wow.min.js"></script>
 <script>
  new WOW().init();
 </script>
@@ -82,80 +82,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
 								<ul class="dropdown-menu multi-column columns-3">
 									<div class="row">
-										<div class="col-sm-4">
+										<div class="col-sm-12">
 											<ul class="multi-column-dropdown">
-												<h6>Men's Wear</h6>
-												<li><a href="products.html">Clothing</a></li>
-												<li><a href="products.html">Wallets</a></li>
-												<li><a href="products.html">Shoes</a></li>
-												<li><a href="products.html">Watches</a></li>
-												<li><a href="products.html">Accessories</a></li>
-											</ul>
-										</div>
-										<div class="col-sm-4">
-											<ul class="multi-column-dropdown">
-												<h6>Women's Wear</h6>
-												<li><a href="products.html">Clothing</a></li>
-												<li><a href="products.html">Wallets,Bags</a></li>
-												<li><a href="products.html">Footwear</a></li>
-												<li><a href="products.html">Watches</a></li>
-												<li><a href="products.html">Accessories</a></li>
-												<li><a href="products.html">Jewellery</a></li>
-												<li><a href="products.html">Beauty & Grooming</a></li>
-											</ul>
-										</div>
-										<div class="col-sm-4">
-											<ul class="multi-column-dropdown">
-												<h6>Kid's Wear</h6>
-												<li><a href="products.html">Kids Home Fashion</a></li>
-												<li><a href="products.html">Boy's Clothing</a></li>
-												<li><a href="products.html">Girl's Clothing</a></li>
-												<li><a href="products.html">Shoes</a></li>
-												<li><a href="products.html">Brand Stores</a></li>
+												<h6>Hearing Aid Styles</h6>
+												<li><a href="<?php echo base_url('index.php/dm_user/products');?>">
+Invisible in Canal (IIC)</a></li>
+												<li><a href="<?php echo base_url('index.php/dm_user/products');?>">
+Completely in Canal (CIC)</a></li>
+												<li><a href="<?php echo base_url('index.php/dm_user/products');?>">
+In the Canal (ITC)</a></li>
+												<li><a href="<?php echo base_url('index.php/dm_user/products');?>">
+In the Ear (ITE)</a></li>
+												<li><a href="<?php echo base_url('index.php/dm_user/products');?>">mini Receiver in Canal</a></li>
+												<li><a href="<?php echo base_url('index.php/dm_user/products');?>">Receiver in Canal (RIC)</a></li>
+												<li><a href="<?php echo base_url('index.php/dm_user/products');?>">mini Behind the Ear</a></li>
+												<li><a href="<?php echo base_url('index.php/dm_user/products');?>">Behind the Ear (BTE)</a></li>
 											</ul>
 										</div>
 										<div class="clearfix"></div>
 									</div>
 								</ul>
 							</li>
-							<!--<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Furniture <b class="caret"></b></a>
-								<ul class="dropdown-menu multi-column columns-3">
-									<div class="row">
-										<div class="col-sm-4">
-											<ul class="multi-column-dropdown">
-												<h6>Home Collection</h6>
-												<li><a href="furniture.html">Cookware</a></li>
-												<li><a href="furniture.html">Sofas</a></li>
-												<li><a href="furniture.html">Dining Tables</a></li>
-												<li><a href="furniture.html">Shoe Racks</a></li>
-												<li><a href="furniture.html">Home Decor</a></li>
-											</ul>
-										</div>
-										<div class="col-sm-4">
-											<ul class="multi-column-dropdown">
-												<h6>Office Collection</h6>
-												<li><a href="furniture.html">Carpets</a></li>
-												<li><a href="furniture.html">Tables</a></li>
-												<li><a href="furniture.html">Sofas</a></li>
-												<li><a href="furniture.html">Shoe Racks</a></li>
-												<li><a href="furniture.html">Sockets</a></li>
-												<li><a href="furniture.html">Electrical Machines</a></li>
-											</ul>
-										</div>
-										<div class="col-sm-4">
-											<ul class="multi-column-dropdown">
-												<h6>Decorations</h6>
-												<li><a href="furniture.html">Toys</a></li>
-												<li><a href="furniture.html">Wall Clock</a></li>
-												<li><a href="furniture.html">Lighting</a></li>
-												<li><a href="furniture.html">Top Brands</a></li>
-											</ul>
-										</div>
-										<div class="clearfix"></div>
-									</div>
-								</ul>
-							</li>-->
 							<li><a href="aboutus.html">About Us</a></li>
 						</ul>
 					</div>
@@ -172,8 +119,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div>
 					</div>
 						<!-- search-scripts -->
-						<script src="js/classie.js"></script>
-						<script src="js/uisearch.js"></script>
+						<script src="<?php echo base_url();?>assets/js/classie.js"></script>
+						<script src="<?php echo base_url();?>assets/js/uisearch.js"></script>
 							<script>
 								new UISearch( document.getElementById( 'sb-search' ) );
 							</script>
@@ -184,7 +131,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<a href="checkout.html">
 							<h3> <div class="total">
 								<span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</div>
-								<img src="images/bag.png" alt="" />
+								<img src="<?php echo base_url();?>assets/images/bag.png" alt="" />
 							</h3>
 						</a>
 						<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
@@ -228,97 +175,43 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</article>
 					</div>
 				</div>
-					<script src="js/jquery.wmuSlider.js"></script> 
+					<script src="<?php echo base_url();?>assets/js/jquery.wmuSlider.js"></script> 
 					<script>
 						$('.example1').wmuSlider();         
 					</script> 
 			</div>
 		</div>
 	</div>
-<!-- //banner -->
-<!-- banner-bottom -->
-	<div class="banner-bottom">
-		<div class="container"> 
-			<div class="banner-bottom-grids">
-				<div class="banner-bottom-grid-left animated wow slideInLeft" data-wow-delay=".5s">
-					<div class="grid">
-						<figure class="effect-julia">
-							<img src="images/4.jpg" alt=" " class="img-responsive" />
-							<figcaption>
-								<h3>Best <span>Store</span><i> in online shopping</i></h3>
-								<div>
-									<p>Cupidatat non proident, sunt</p>
-									<p>Officia deserunt mollit anim</p>
-									<p>Laboris nisi ut aliquip consequat</p>
-								</div>
-							</figcaption>			
-						</figure>
-					</div>
-				</div>
-				<div class="banner-bottom-grid-left1 animated wow slideInUp" data-wow-delay=".5s">
-					<div class="banner-bottom-grid-left-grid left1-grid grid-left-grid1">
-						<div class="banner-bottom-grid-left-grid1">
-							<img src="images/1.jpg" alt=" " class="img-responsive" />
-						</div>
-						<div class="banner-bottom-grid-left1-pos">
-							<p>Discount 45%</p>
-						</div>
-					</div>
-					<div class="banner-bottom-grid-left-grid left1-grid grid-left-grid1">
-						<div class="banner-bottom-grid-left-grid1">
-							<img src="images/2.jpg" alt=" " class="img-responsive" />
-						</div>
-						<div class="banner-bottom-grid-left1-position">
-							<div class="banner-bottom-grid-left1-pos1">
-								<p>Latest New Collections</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="banner-bottom-grid-right animated wow slideInRight" data-wow-delay=".5s">
-					<div class="banner-bottom-grid-left-grid grid-left-grid1">
-						<div class="banner-bottom-grid-left-grid1">
-							<img src="images/3.jpg" alt=" " class="img-responsive" />
-						</div>
-						<div class="grid-left-grid1-pos">
-							<p>top and classic designs <span>2016 Collection</span></p>
-						</div>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-		</div>
-	</div>
-<!-- //banner-bottom -->
+
 <!-- collections -->
 	<div class="new-collections">
 		<div class="container">
-			<h3 class="animated wow zoomIn" data-wow-delay=".5s">Best Selling</h3>
+			<h3 class="animated wow zoomIn" data-wow-delay=".5s">Our Products</h3>
 			<p class="est animated wow zoomIn" data-wow-delay=".5s"></p>
 			<div class="new-collections-grids">
 				<div class="col-md-3 new-collections-grid">
 					<div class="new-collections-grid1 animated wow slideInUp" data-wow-delay=".5s">
 						<div class="new-collections-grid1-image">
-							<a href="single.html" class="product-image"><img src="images/7.jpg" alt=" " class="img-responsive" /></a>
+							<a href="single.html" class="product-image"><img src="<?php echo base_url();?>assets/images/7.jpg" alt=" " class="img-responsive" /></a>
 							<div class="new-collections-grid1-image-pos">
 								<a href="single.html">Quick View</a>
 							</div>
 							<div class="new-collections-grid1-right">
 								<div class="rating">
 									<div class="rating-left">
-										<img src="images/2.png" alt=" " class="img-responsive" />
+										<img src="<?php echo base_url();?>assets/images/2.png" alt=" " class="img-responsive" />
 									</div>
 									<div class="rating-left">
-										<img src="images/2.png" alt=" " class="img-responsive" />
+										<img src="<?php echo base_url();?>assets/images/2.png" alt=" " class="img-responsive" />
 									</div>
 									<div class="rating-left">
-										<img src="images/2.png" alt=" " class="img-responsive" />
+										<img src="<?php echo base_url();?>assets/images/2.png" alt=" " class="img-responsive" />
 									</div>
 									<div class="rating-left">
-										<img src="images/1.png" alt=" " class="img-responsive" />
+										<img src="<?php echo base_url();?>assets/images/1.png" alt=" " class="img-responsive" />
 									</div>
 									<div class="rating-left">
-										<img src="images/1.png" alt=" " class="img-responsive" />
+										<img src="<?php echo base_url();?>assets/images/1.png" alt=" " class="img-responsive" />
 									</div>
 									<div class="clearfix"> </div>
 								</div>
@@ -332,26 +225,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<div class="new-collections-grid1 animated wow slideInUp" data-wow-delay=".5s">
 						<div class="new-collections-grid1-image">
-							<a href="single.html" class="product-image"><img src="images/8.jpg" alt=" " class="img-responsive" /></a>
+							<a href="single.html" class="product-image"><img src="<?php echo base_url();?>assets/images/8.jpg" alt=" " class="img-responsive" /></a>
 							<div class="new-collections-grid1-image-pos">
 								<a href="single.html">Quick View</a>
 							</div>
 							<div class="new-collections-grid1-right">
 								<div class="rating">
 									<div class="rating-left">
-										<img src="images/2.png" alt=" " class="img-responsive" />
+										<img src="<?php echo base_url();?>assets/images/2.png" alt=" " class="img-responsive" />
 									</div>
 									<div class="rating-left">
-										<img src="images/2.png" alt=" " class="img-responsive" />
+										<img src="<?php echo base_url();?>assets/images/2.png" alt=" " class="img-responsive" />
 									</div>
 									<div class="rating-left">
-										<img src="images/1.png" alt=" " class="img-responsive" />
+										<img src="<?php echo base_url();?>assets/images/1.png" alt=" " class="img-responsive" />
 									</div>
 									<div class="rating-left">
-										<img src="images/1.png" alt=" " class="img-responsive" />
+										<img src="<?php echo base_url();?>assets/images/1.png" alt=" " class="img-responsive" />
 									</div>
 									<div class="rating-left">
-										<img src="images/1.png" alt=" " class="img-responsive" />
+										<img src="<?php echo base_url();?>assets/images/1.png" alt=" " class="img-responsive" />
 									</div>
 									<div class="clearfix"> </div>
 								</div>
@@ -367,26 +260,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="col-md-6 new-collections-grid">
 					<div class="new-collections-grid1 new-collections-grid1-image-width animated wow slideInUp" data-wow-delay=".5s">
 						<div class="new-collections-grid1-image">
-							<a href="single.html" class="product-image"><img src="images/5.jpg" alt=" " class="img-responsive" /></a>
+							<a href="single.html" class="product-image"><img src="<?php echo base_url();?>assets/images/5.jpg" alt=" " class="img-responsive" /></a>
 							<div class="new-collections-grid1-image-pos new-collections-grid1-image-pos1">
 								<a href="single.html">Quick View</a>
 							</div>
 							<div class="new-collections-grid1-right new-collections-grid1-right-rate">
 								<div class="rating">
 									<div class="rating-left">
-										<img src="images/2.png" alt=" " class="img-responsive" />
+										<img src="<?php echo base_url();?>assets/images/2.png" alt=" " class="img-responsive" />
 									</div>
 									<div class="rating-left">
-										<img src="images/2.png" alt=" " class="img-responsive" />
+										<img src="<?php echo base_url();?>assets/images/2.png" alt=" " class="img-responsive" />
 									</div>
 									<div class="rating-left">
-										<img src="images/2.png" alt=" " class="img-responsive" />
+										<img src="<?php echo base_url();?>assets/images/2.png" alt=" " class="img-responsive" />
 									</div>
 									<div class="rating-left">
-										<img src="images/2.png" alt=" " class="img-responsive" />
+										<img src="<?php echo base_url();?>assets/images/2.png" alt=" " class="img-responsive" />
 									</div>
 									<div class="rating-left">
-										<img src="images/1.png" alt=" " class="img-responsive" />
+										<img src="<?php echo base_url();?>assets/images/1.png" alt=" " class="img-responsive" />
 									</div>
 									<div class="clearfix"> </div>
 								</div>
@@ -405,26 +298,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="new-collections-grid1-sub">
 							<div class="new-collections-grid1 animated wow slideInUp" data-wow-delay=".5s">
 								<div class="new-collections-grid1-image">
-									<a href="single.html" class="product-image"><img src="images/6.jpg" alt=" " class="img-responsive" /></a>
+									<a href="single.html" class="product-image"><img src="<?php echo base_url();?>assets/images/6.jpg" alt=" " class="img-responsive" /></a>
 									<div class="new-collections-grid1-image-pos">
 										<a href="single.html">Quick View</a>
 									</div>
 									<div class="new-collections-grid1-right">
 										<div class="rating">
 											<div class="rating-left">
-												<img src="images/2.png" alt=" " class="img-responsive" />
+												<img src="<?php echo base_url();?>assets/images/2.png" alt=" " class="img-responsive" />
 											</div>
 											<div class="rating-left">
-												<img src="images/2.png" alt=" " class="img-responsive" />
+												<img src="<?php echo base_url();?>assets/images/2.png" alt=" " class="img-responsive" />
 											</div>
 											<div class="rating-left">
-												<img src="images/2.png" alt=" " class="img-responsive" />
+												<img src="<?php echo base_url();?>assets/images/2.png" alt=" " class="img-responsive" />
 											</div>
 											<div class="rating-left">
-												<img src="images/2.png" alt=" " class="img-responsive" />
+												<img src="<?php echo base_url();?>assets/images/2.png" alt=" " class="img-responsive" />
 											</div>
 											<div class="rating-left">
-												<img src="images/2.png" alt=" " class="img-responsive" />
+												<img src="<?php echo base_url();?>assets/images/2.png" alt=" " class="img-responsive" />
 											</div>
 											<div class="clearfix"> </div>
 										</div>
@@ -440,26 +333,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="new-collections-grid1-sub">
 							<div class="new-collections-grid1 animated wow slideInUp" data-wow-delay=".5s">
 								<div class="new-collections-grid1-image">
-									<a href="single.html" class="product-image"><img src="images/9.jpg" alt=" " class="img-responsive" /></a>
+									<a href="single.html" class="product-image"><img src="<?php echo base_url();?>assets/images/9.jpg" alt=" " class="img-responsive" /></a>
 									<div class="new-collections-grid1-image-pos">
 										<a href="single.html">Quick View</a>
 									</div>
 									<div class="new-collections-grid1-right">
 										<div class="rating">
 											<div class="rating-left">
-												<img src="images/2.png" alt=" " class="img-responsive" />
+												<img src="<?php echo base_url();?>assets/images/2.png" alt=" " class="img-responsive" />
 											</div>
 											<div class="rating-left">
-												<img src="images/1.png" alt=" " class="img-responsive" />
+												<img src="<?php echo base_url();?>assets/images/1.png" alt=" " class="img-responsive" />
 											</div>
 											<div class="rating-left">
-												<img src="images/1.png" alt=" " class="img-responsive" />
+												<img src="<?php echo base_url();?>assets/images/1.png" alt=" " class="img-responsive" />
 											</div>
 											<div class="rating-left">
-												<img src="images/1.png" alt=" " class="img-responsive" />
+												<img src="<?php echo base_url();?>assets/images/1.png" alt=" " class="img-responsive" />
 											</div>
 											<div class="rating-left">
-												<img src="images/1.png" alt=" " class="img-responsive" />
+												<img src="<?php echo base_url();?>assets/images/1.png" alt=" " class="img-responsive" />
 											</div>
 											<div class="clearfix"> </div>
 										</div>
@@ -475,119 +368,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="clearfix"> </div>
 					</div>
 				</div>
-				<div class="col-md-3 new-collections-grid">
-					<div class="new-collections-grid1 animated wow slideInUp" data-wow-delay=".5s">
-						<div class="new-collections-grid1-image">
-							<a href="single.html" class="product-image"><img src="images/10.jpg" alt=" " class="img-responsive" /></a>
-							<div class="new-collections-grid1-image-pos">
-								<a href="single.html">Quick View</a>
-							</div>
-							<div class="new-collections-grid1-right">
-								<div class="rating">
-									<div class="rating-left">
-										<img src="images/2.png" alt=" " class="img-responsive" />
-									</div>
-									<div class="rating-left">
-										<img src="images/2.png" alt=" " class="img-responsive" />
-									</div>
-									<div class="rating-left">
-										<img src="images/2.png" alt=" " class="img-responsive" />
-									</div>
-									<div class="rating-left">
-										<img src="images/1.png" alt=" " class="img-responsive" />
-									</div>
-									<div class="rating-left">
-										<img src="images/1.png" alt=" " class="img-responsive" />
-									</div>
-									<div class="clearfix"> </div>
-								</div>
-							</div>
-						</div>
-						<h4><a href="single.html">Pearl & Stone Anklet</a></h4>
-						<p>Vel illum qui dolorem eum fugiat.</p>
-						<div class="new-collections-grid1-left simpleCart_shelfItem">
-							<p><i>$180</i> <span class="item_price">$120</span><a class="item_add" href="#">add to cart </a></p>
-						</div>
-					</div>
-					<div class="new-collections-grid1 animated wow slideInUp" data-wow-delay=".5s">
-						<div class="new-collections-grid1-image">
-							<a href="single.html" class="product-image"><img src="images/11.jpg" alt=" " class="img-responsive" /></a>
-							<div class="new-collections-grid1-image-pos">
-								<a href="single.html">Quick View</a>
-							</div>
-							<div class="new-collections-grid1-right">
-								<div class="rating">
-									<div class="rating-left">
-										<img src="images/2.png" alt=" " class="img-responsive" />
-									</div>
-									<div class="rating-left">
-										<img src="images/2.png" alt=" " class="img-responsive" />
-									</div>
-									<div class="rating-left">
-										<img src="images/2.png" alt=" " class="img-responsive" />
-									</div>
-									<div class="rating-left">
-										<img src="images/2.png" alt=" " class="img-responsive" />
-									</div>
-									<div class="rating-left">
-										<img src="images/1.png" alt=" " class="img-responsive" />
-									</div>
-									<div class="clearfix"> </div>
-								</div>
-							</div>
-						</div>
-						<h4><a href="single.html">Stones Bangles</a></h4>
-						<p>Vel illum qui dolorem eum fugiat.</p>
-						<div class="new-collections-grid1-left simpleCart_shelfItem">
-							<p><i>$340</i> <span class="item_price">$257</span><a class="item_add" href="#">add to cart </a></p>
-						</div>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-		</div>
-	</div>
-<!-- //collections -->
-<!-- new-timer -->
-	<div class="timer">
-		<div class="container">
-			<div class="timer-grids">
-				<div class="col-md-8 timer-grid-left animated wow slideInLeft" data-wow-delay=".5s">
-					<h3><a href="products.html"></a></h3>
-					<div class="rating">
-						<div class="rating-left">
-							<img src="images/2.png" alt=" " class="img-responsive" />
-						</div>
-						<div class="rating-left">
-							<img src="images/2.png" alt=" " class="img-responsive" />
-						</div>
-						<div class="rating-left">
-							<img src="images/2.png" alt=" " class="img-responsive" />
-						</div>
-						<div class="rating-left">
-							<img src="images/2.png" alt=" " class="img-responsive" />
-						</div>
-						<div class="rating-left">
-							<img src="images/1.png" alt=" " class="img-responsive" />
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-					<div class="new-collections-grid1-left simpleCart_shelfItem timer-grid-left-price">
-						<p><i></i> <span class="item_price"></span></p>
-						<h4></h4>
-						<!--<p><a class="item_add timer_add" href="#">add to cart </a></p>-->
-					</div>
-					<div id="counter"> </div>
-					<script src="js/jquery.countdown.js"></script>
+						
+					
+					<script src="<?php echo base_url();?>assets/js/jquery.countdown.js"></script>
 					<script src="js/script.js"></script>
-				</div>
-				<div class="col-md-4 timer-grid-right animated wow slideInRight" data-wow-delay=".5s">
-					<div class="timer-grid-right1">
-						<img src="images/17.jpg" alt=" " class="img-responsive" />
-						<div class="timer-grid-right-pos">
-							<h4>Special Offer</h4>
-						</div>
-					</div>
 				</div>
 				<div class="clearfix"> </div>
 			</div>
