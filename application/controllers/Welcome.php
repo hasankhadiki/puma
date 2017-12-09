@@ -18,8 +18,11 @@ class Welcome extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index()
-	{
-		$this->load->view('v_home');
-	}
+	public function index($page = 'v_home')
+    {
+    	$data['title'] = ucfirst($page);
+    	$this->load->view('header');
+    	$this->load->view($page, $data);
+    	$this->load->view('footer');
+    }
 }

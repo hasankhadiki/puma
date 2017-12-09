@@ -137,9 +137,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="col-md-4 products-right-grids-bottom-grid">
 						<div class="new-collections-grid1 products-right-grid1 animated wow slideInUp" data-wow-delay=".5s">
 							<div class="new-collections-grid1-image">
-								<a href="single.html" class="product-image"><img src="images/19.jpg" alt=" " class="img-responsive"></a>
+								<a href="<?php echo base_url()."dm_user/view/v_single";?>" class="product-image"><img src="images/19.jpg" alt=" " class="img-responsive"></a>
 								<div class="new-collections-grid1-image-pos products-right-grids-pos">
-									<a href="single.html">Quick View</a>
+									<a href="<?php echo base_url()."dm_user/view/v_single";?>">Quick View</a>
 								</div>
 								<div class="new-collections-grid1-right products-right-grids-pos-right">
 									<div class="rating">
