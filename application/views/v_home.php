@@ -1,6 +1,6 @@
-<?php
+<!-- <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-?>
+?> -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -45,23 +45,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="header-grid
 				<div class="header-grid-left animated wow slideInLeft" data-wow-delay=".5s">
 					<ul>
-						<li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="<?php echo site_url()."/login/";?>">Login</a></li>
-						<li><i class="glyphicon glyphicon-book" aria-hidden="true"></i><a href="register.html">Register</a></li>
+						<li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="<?php echo site_url()."/login/";?>"> Login</a></li>
+						<li><i class="glyphicon glyphicon-book" aria-hidden="true"></i><a href="register.html"> Register</a></li>
 					</ul>
 				</div>
-				<!--<div class="header-grid-right animated wow slideInRight" data-wow-delay=".5s">
-					<ul class="social-icons">
-						<li><a href="#" class="facebook"></a></li>
-						<li><a href="#" class="twitter"></a></li>
-						<li><a href="#" class="g"></a></li>
-						<li><a href="#" class="instagram"></a></li>
-					</ul>
-				</div>-->
 				<div class="clearfix"> </div>
 			</div>
 			<div class="logo-nav">
 				<div class="logo-nav-left animated wow zoomIn" data-wow-delay=".5s">
-					<h1><a href="index.html">P   u   m   a <span>Hearing Aid</span></a></h1>
+					<h1><a href="<?php echo base_url('index.php/dm_user/home');?>">P   u   m   a <span>Hearing Aid</span></a></h1>
 				</div>
 				<div class="logo-nav-left1">
 					<nav class="navbar navbar-default">
@@ -76,7 +68,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div> 
 					<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 						<ul class="nav navbar-nav">
-							<li class="active"><a href="index.html" class="act">Home</a></li>	
+							<li class="active"><a href="<?php echo base_url('index.php/dm_user/home');?>" class="act">Home</a></li>	
 							<!-- Mega Menu -->
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
@@ -184,121 +176,22 @@ In the Ear (ITE)</a></li>
 	</div>
 
 <!-- collections -->
+
+
 	<div class="new-collections">
 		<div class="container">
 			<h3 class="animated wow zoomIn" data-wow-delay=".5s">Our Products</h3>
+<?php $i=0; 
+foreach ($data as $x) { ?>
 			<p class="est animated wow zoomIn" data-wow-delay=".5s"></p>
 			<div class="new-collections-grids">
-				<div class="col-md-3 new-collections-grid">
-					<div class="new-collections-grid1 animated wow slideInUp" data-wow-delay=".5s">
-						<div class="new-collections-grid1-image">
-							<a href="single.html" class="product-image"><img src="<?php echo base_url();?>assets/images/7.jpg" alt=" " class="img-responsive" /></a>
-							<div class="new-collections-grid1-image-pos">
-								<a href="single.html">Quick View</a>
-							</div>
-							<div class="new-collections-grid1-right">
-								<div class="rating">
-									<div class="rating-left">
-										<img src="<?php echo base_url();?>assets/images/2.png" alt=" " class="img-responsive" />
-									</div>
-									<div class="rating-left">
-										<img src="<?php echo base_url();?>assets/images/2.png" alt=" " class="img-responsive" />
-									</div>
-									<div class="rating-left">
-										<img src="<?php echo base_url();?>assets/images/2.png" alt=" " class="img-responsive" />
-									</div>
-									<div class="rating-left">
-										<img src="<?php echo base_url();?>assets/images/1.png" alt=" " class="img-responsive" />
-									</div>
-									<div class="rating-left">
-										<img src="<?php echo base_url();?>assets/images/1.png" alt=" " class="img-responsive" />
-									</div>
-									<div class="clearfix"> </div>
-								</div>
-							</div>
-						</div>
-						<h4><a href="single.html">Formal Shirt</a></h4>
-						<p>Vel illum qui dolorem eum fugiat.</p>
-						<div class="new-collections-grid1-left simpleCart_shelfItem">
-							<p><i>$325</i> <span class="item_price">$250</span><a class="item_add" href="#">add to cart </a></p>
-						</div>
-					</div>
-					<div class="new-collections-grid1 animated wow slideInUp" data-wow-delay=".5s">
-						<div class="new-collections-grid1-image">
-							<a href="single.html" class="product-image"><img src="<?php echo base_url();?>assets/images/8.jpg" alt=" " class="img-responsive" /></a>
-							<div class="new-collections-grid1-image-pos">
-								<a href="single.html">Quick View</a>
-							</div>
-							<div class="new-collections-grid1-right">
-								<div class="rating">
-									<div class="rating-left">
-										<img src="<?php echo base_url();?>assets/images/2.png" alt=" " class="img-responsive" />
-									</div>
-									<div class="rating-left">
-										<img src="<?php echo base_url();?>assets/images/2.png" alt=" " class="img-responsive" />
-									</div>
-									<div class="rating-left">
-										<img src="<?php echo base_url();?>assets/images/1.png" alt=" " class="img-responsive" />
-									</div>
-									<div class="rating-left">
-										<img src="<?php echo base_url();?>assets/images/1.png" alt=" " class="img-responsive" />
-									</div>
-									<div class="rating-left">
-										<img src="<?php echo base_url();?>assets/images/1.png" alt=" " class="img-responsive" />
-									</div>
-									<div class="clearfix"> </div>
-								</div>
-							</div>
-						</div>
-						<h4><a href="single.html">Running Shoes</a></h4>
-						<p>Vel illum qui dolorem eum fugiat.</p>
-						<div class="new-collections-grid1-left simpleCart_shelfItem">
-							<p><i>$280</i> <span class="item_price">$150</span><a class="item_add" href="#">add to cart </a></p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 new-collections-grid">
-					<div class="new-collections-grid1 new-collections-grid1-image-width animated wow slideInUp" data-wow-delay=".5s">
-						<div class="new-collections-grid1-image">
-							<a href="single.html" class="product-image"><img src="<?php echo base_url();?>assets/images/5.jpg" alt=" " class="img-responsive" /></a>
-							<div class="new-collections-grid1-image-pos new-collections-grid1-image-pos1">
-								<a href="single.html">Quick View</a>
-							</div>
-							<div class="new-collections-grid1-right new-collections-grid1-right-rate">
-								<div class="rating">
-									<div class="rating-left">
-										<img src="<?php echo base_url();?>assets/images/2.png" alt=" " class="img-responsive" />
-									</div>
-									<div class="rating-left">
-										<img src="<?php echo base_url();?>assets/images/2.png" alt=" " class="img-responsive" />
-									</div>
-									<div class="rating-left">
-										<img src="<?php echo base_url();?>assets/images/2.png" alt=" " class="img-responsive" />
-									</div>
-									<div class="rating-left">
-										<img src="<?php echo base_url();?>assets/images/2.png" alt=" " class="img-responsive" />
-									</div>
-									<div class="rating-left">
-										<img src="<?php echo base_url();?>assets/images/1.png" alt=" " class="img-responsive" />
-									</div>
-									<div class="clearfix"> </div>
-								</div>
-							</div>
-							<div class="new-one">
-								<p>New</p>
-							</div>
-						</div>
-						<h4><a href="single.html">Dining Table</a></h4>
-						<p>Vel illum qui dolorem eum fugiat.</p>
-						<div class="new-collections-grid1-left simpleCart_shelfItem">
-							<p><i>$580</i> <span class="item_price">$550</span><a class="item_add" href="#">add to cart </a></p>
-						</div>
-					</div>
+
+				<div class="col-md-12 new-collections-grid">
 					<div class="new-collections-grid-sub-grids">
 						<div class="new-collections-grid1-sub">
 							<div class="new-collections-grid1 animated wow slideInUp" data-wow-delay=".5s">
 								<div class="new-collections-grid1-image">
-									<a href="single.html" class="product-image"><img src="<?php echo base_url();?>assets/images/6.jpg" alt=" " class="img-responsive" /></a>
+									<a href="single.html" class="product-image"><img src="<?php echo $x['image']; ?>" alt=" " class="img-responsive" /></a>
 									<div class="new-collections-grid1-image-pos">
 										<a href="single.html">Quick View</a>
 									</div>
@@ -323,57 +216,24 @@ In the Ear (ITE)</a></li>
 										</div>
 									</div>
 								</div>
-								<h4><a href="single.html">Wall Lamp</a></h4>
-								<p>Vel illum qui dolorem eum fugiat.</p>
+								<h4><a href="single.html"><?php echo $x['nama_barang'];  ?></a></h4>
+								<p><?php echo $x['deskripsi_barang'];  ?></p>
 								<div class="new-collections-grid1-left simpleCart_shelfItem">
-									<p><i>$480</i> <span class="item_price">$400</span><a class="item_add" href="#">add to cart </a></p>
+									<p><i>$480</i> <span class="item_price">$ <?php echo $x['harga_barang'];  ?></span><a class="item_add" href="#">add to cart </a></p>
 								</div>
 							</div>
 						</div>
-						<div class="new-collections-grid1-sub">
-							<div class="new-collections-grid1 animated wow slideInUp" data-wow-delay=".5s">
-								<div class="new-collections-grid1-image">
-									<a href="single.html" class="product-image"><img src="<?php echo base_url();?>assets/images/9.jpg" alt=" " class="img-responsive" /></a>
-									<div class="new-collections-grid1-image-pos">
-										<a href="single.html">Quick View</a>
-									</div>
-									<div class="new-collections-grid1-right">
-										<div class="rating">
-											<div class="rating-left">
-												<img src="<?php echo base_url();?>assets/images/2.png" alt=" " class="img-responsive" />
-											</div>
-											<div class="rating-left">
-												<img src="<?php echo base_url();?>assets/images/1.png" alt=" " class="img-responsive" />
-											</div>
-											<div class="rating-left">
-												<img src="<?php echo base_url();?>assets/images/1.png" alt=" " class="img-responsive" />
-											</div>
-											<div class="rating-left">
-												<img src="<?php echo base_url();?>assets/images/1.png" alt=" " class="img-responsive" />
-											</div>
-											<div class="rating-left">
-												<img src="<?php echo base_url();?>assets/images/1.png" alt=" " class="img-responsive" />
-											</div>
-											<div class="clearfix"> </div>
-										</div>
-									</div>
-								</div>
-								<h4><a href="single.html">Wall Lamp</a></h4>
-								<p>Vel illum qui dolorem eum fugiat.</p>
-								<div class="new-collections-grid1-left simpleCart_shelfItem">
-									<p><i>$280</i> <span class="item_price">$150</span><a class="item_add" href="#">add to cart </a></p>
-								</div>
-							</div>
-						</div>
+
 						<div class="clearfix"> </div>
 					</div>
-				</div>
-						
-					
+				</div>						
+<?php } ?>					
 					<script src="<?php echo base_url();?>assets/js/jquery.countdown.js"></script>
-					<script src="js/script.js"></script>
+					<script src="<?php echo base_url();?>assets/js/script.js"></script>
+
 				</div>
 				<div class="clearfix"> </div>
+
 			</div>
 		</div>
 	</div>
