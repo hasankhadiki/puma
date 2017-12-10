@@ -111,7 +111,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		} ?></h2>
 	</div>	
 
-			<table class="table table-bordered">
+			<table class="table table-bordered ">
 				<tr>
 					<th>ID</th>
 					<th>NAMA</th>

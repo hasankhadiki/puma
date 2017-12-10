@@ -1,6 +1,3 @@
-<!-- <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?> -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -175,8 +172,8 @@ In the Ear (ITE)</a></li>
 		</div>
 	</div>
 
-<!-- collections -->
 
+<!-- collections -->
 
 	<div class="new-collections">
 		<div class="container">
@@ -193,7 +190,7 @@ foreach ($data as $x) { ?>
 								<div class="new-collections-grid1-image">
 									<a href="single.html" class="product-image"><img src="<?php echo $x['image']; ?>" alt=" " class="img-responsive" /></a>
 									<div class="new-collections-grid1-image-pos">
-										<a href="single.html">Quick View</a>
+										<a data-toggle="modal" data-target="#Product-Modal<?php echo $i; ?>" href="">Quick View</a>
 									</div>
 									<div class="new-collections-grid1-right">
 										<div class="rating">
@@ -227,7 +224,7 @@ foreach ($data as $x) { ?>
 						<div class="clearfix"> </div>
 					</div>
 				</div>						
-<?php } ?>					
+			
 					<script src="<?php echo base_url();?>assets/js/jquery.countdown.js"></script>
 					<script src="<?php echo base_url();?>assets/js/script.js"></script>
 
@@ -237,7 +234,65 @@ foreach ($data as $x) { ?>
 			</div>
 		</div>
 	</div>
-<!-- //new-timer -->
+
+<!-- Product Modal -->
+        <div id="Product-Modal<?php echo $i; ?>" class="modal fade" role="dialog">
+	  	<div class="modal-dialog">
+
+		    <!-- Modal content-->
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        <h4 class="modal-title">QUICK VIEW</h4>
+		      </div>
+		      <div class="modal-body">
+				<div class="row">
+					<div class="col-sm-6">	
+						<a class="product-img" >
+							<img class="img-responsive" src="<?php echo $x['image']; ?>" alt="ABD">
+						</a>								
+					</div>
+					<div class="col-md-6" style="text-align: left;">
+					 <table style="width:100%">
+						<tr>
+							<td><b>Merk :</b></td>	
+						</tr>
+						<tr>
+							<td><?php echo $x['merk_barang']; ?></td>
+						</tr>
+						<tr>
+							<td><b>Nama :</b></td>
+						</tr>
+						<tr>
+							<td><?php echo $x['nama_barang']; ?></td>
+						</tr>
+						<tr>
+							<td><b>Harga :</b></td>
+						</tr>
+						<tr>
+							<td>$<?php echo $x['harga_barang']; ?></td>
+						</tr>
+						<tr>
+							<td><b>Deskripsi :</b></td>
+						</tr>					
+						<tr>
+							<td><?php echo $x['deskripsi_barang']; ?></td>
+						</tr>
+					</table> 
+					</div>
+				</div>	        
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		      </div>
+		    </div>
+                <?php $i++; ?>
+	  	</div>
+	</div>
+        
+            <?php } ?>
+<!-- Product Modal -->
+
 <!-- collections-bottom -->
 	<div class="collections-bottom">
 		<div class="container">
