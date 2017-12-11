@@ -10,18 +10,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!DOCTYPE html>
 <html>
 <head>
-<title>Best Store a Ecommerce Online Shopping Category Flat Bootstrap Responsive Website Template | Checkout :: w3layouts</title>
-<!-- for-mobile-apps -->
+<title>Puma Hearing | Checkout</title>
+<!-- //for-mobile-apps -->
 <link href="<?php echo base_url('assets/css/bootstrap.css');?>" rel="stylesheet" type="text/css" media="all" />
 <link href="<?php echo base_url('assets/css/style.css');?>" rel="stylesheet" type="text/css" media="all" />
 <!-- js -->
-<script src="js/jquery.min.js"></script>
+<script src="<?php echo base_url('assets/js/jquery.min.js');?>"></script>
 <!-- //js -->
 <!-- cart -->
-<script src="js/simpleCart.min.js"></script>
+<script src="<?php echo base_url();?>assets/js/simpleCart.min.js"></script>
 <!-- cart -->
 <!-- for bootstrap working -->
-<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>assets/js/bootstrap-3.1.1.min.js"></script>
 <!-- //for bootstrap working -->
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
@@ -29,8 +29,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <link rel="stylesheet" href=”<?php echo base_url('assets/css/jquery.countdown.css');?>” />
 <!-- //timer -->
 <!-- animation-effect -->
-<link href="css/animate.min.css" rel="stylesheet"> 
-<script src="js/wow.min.js"></script>
+<link href="<?php echo base_url();?>assets/css/animate.min.css" rel="stylesheet"> 
+<script src="<?php echo base_url();?>assets/js/wow.min.js"></script>
 <script>
  new WOW().init();
 </script>

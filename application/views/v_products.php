@@ -33,8 +33,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
  new WOW().init();
 </script>
 <!-- //animation-effect -->
-</head>
-</head>
 	
 <body>
 <!-- breadcrumbs -->
@@ -250,7 +248,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 												<h4><a href="single.html"><?php echo $x['nama_barang'];  ?></a></h4>
 												<p><?php echo $x['deskripsi_barang'];  ?></p>
 												<div class="new-collections-grid1-left simpleCart_shelfItem">
-													<p><i>$480</i> <span class="item_price">$ <?php echo $x['harga_barang'];  ?></span><a class="item_add" href="#">add to cart </a></p>
+													<p><i>$480</i> <span class="item_price">$ <?php echo $x['harga_barang'];  ?></span><a class="item_add" href="#">add to cart</a></p>
 												</div>
 											</div>
 										</div>

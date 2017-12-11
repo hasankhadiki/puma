@@ -1,12 +1,12 @@
-<html>
+	<html>
 <!-- header -->
 	<div class="header">
 		<div class="container">
 			<div class="header-grid">
 				<div class="header-grid-left animated wow slideInLeft" data-wow-delay=".5s">
 					<ul>
-						<li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="<?php echo base_url()."dm_user/view/v_login";?>">Login</a></li>
-						<li><i class="glyphicon glyphicon-book" aria-hidden="true"></i><a href="<?php echo base_url()."dm_user/view/v_register";?>">Register</a></li>
+						<li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="<?php echo base_url()."dm_user/login";?>">Login</a></li>
+						<li><i class="glyphicon glyphicon-book" aria-hidden="true"></i><a href="<?php echo base_url()."dm_user/register";?>">Register</a></li>
 					</ul>
 				</div>
 				<div class="clearfix"> </div>
@@ -28,9 +28,9 @@
 					</div> 
 					<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 						<ul class="nav navbar-nav">
-							<li class=""><a href="<?php echo base_url()."dm_user/view/v_home";?>" class="act">Home</a></li>
-							<li><a href="<?php echo base_url()."dm_user/view/v_products";?>">Products</a></li>
-							<li><a href="<?php echo base_url()."dm_user/view/v_mail";?>">Mail Us</a></li>
+							<li class=""><a href="<?php echo base_url()."dm_user/home";?>" class="act">Home</a></li>
+							<li><a href="<?php echo base_url()."dm_user/products";?>">Products</a></li>
+							<li><a href="<?php echo base_url()."dm_user/mail";?>">Mail Us</a></li>
 						</ul>
 					</div>
 					</nav>
@@ -55,7 +55,7 @@
 				</div>
 				<div class="header-right">
 					<div class="cart box_1">
-						<a href="<?php echo base_url()."dm_user/view/v_checkout";?>">
+						<a href="<?php echo base_url()."dm_user/checkout";?>">
 							<h3> <div class="total">
 								<span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</div>
 								<img src="images/bag.png" alt="" />
