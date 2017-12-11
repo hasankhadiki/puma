@@ -195,8 +195,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-default">Kirim</button>
+				<button type="submit" class="btn btn-info">Simpan</button>
+        <button type="button" class="btn btn-warning" data-dismiss="modal">Batal</button>
       </div>
       </form>
     </div>
