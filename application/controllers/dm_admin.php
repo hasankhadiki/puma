@@ -7,6 +7,7 @@ class dm_admin extends CI_Controller {
 
 		parent::__construct();
 		$this->load->model('m_barang');
+        $this->load->model('user');
 
 	}
 
@@ -14,6 +15,13 @@ class dm_admin extends CI_Controller {
         $this->load->view('admin/v_admin_banner');
 		$this->load->view('admin/v_admin_index');
 	}
+
+    public function pemesanan(){
+        $data = $this->user->ambil_data();
+        
+        $this->load->view('admin/v_admin_pemesanan', array('data' => $data));
+    }
+
 
 	public function layout(){
 		$data = $this->m_barang->ambil_data();
