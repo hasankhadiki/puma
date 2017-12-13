@@ -13,10 +13,10 @@ class Auth extends CI_Controller {
 	function index(){
             $data['err_message'] = "";
             if($this->session->userdata('status') != "login"){
-                $this->load->view('admin/v_login', $data);
+                $this->load->view('dm_user/login', $data);
             }else{
             //echo "YOU'RE ALREADY LOGGED IN";
-                redirect("dm_user");
+                redirect("dm_user/home");
             }
     }
 
