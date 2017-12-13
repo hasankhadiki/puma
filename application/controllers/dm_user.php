@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Dm_user extends CI_Controller {
 
     function __construct(){
-		parent::__construct();		
+		parent::__construct();
 		$this->load->model('m_barang');
         $this->load->helper(array('form','url'));
 	}
@@ -45,6 +45,12 @@ class Dm_user extends CI_Controller {
 	public function checkout(){
        	$this->load->view('header');
 		$this->load->view('v_checkout');
+		$this->load->view('footer');
+	}
+  public function forgot(){
+		$this->load->helper('form');
+       	$this->load->view('header');
+		$this->load->view('v_forgot');
 		$this->load->view('footer');
 	}
 	// public function view($page = 'v_home')
