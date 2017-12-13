@@ -139,7 +139,7 @@ foreach ($data as $x) { ?>
 				<div class="row">
 					<div class="col-sm-6">	
 						<a class="product-img" >
-							<img class="img-responsive" src="<?php echo $x['image']; ?>" alt="ABD">
+							<img class="img-responsive" src="<?php echo base_url().$x['image']; ?>" alt="ABD">
 						</a>								
 					</div>
 					<div class="col-md-6" style="text-align: left;">
@@ -187,10 +187,6 @@ foreach ($data as $x) { ?>
 	</div>
 </div>
 
-
-<!-- 	<div class="new-collections">
-		<div class="container">
-			<h3 class="animated wow zoomIn" data-wow-delay=".5s">Our Products</h3> -->
 
 <!-- Product Modal -->
 
