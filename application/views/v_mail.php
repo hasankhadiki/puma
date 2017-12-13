@@ -10,7 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!DOCTYPE html>
 <html>
 <head>
-<title>Puma Hearing | Mail Us</title>
+<title>Puma Hearing | Find Us</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -50,7 +50,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 			<ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
 				<li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
-				<li class="active">Mail Us</li>
+				<li class="active">Find Us</li>
 			</ol>
 		</div>
 	</div>
@@ -58,8 +58,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- mail -->
 	<div class="mail animated wow zoomIn" data-wow-delay=".5s">
 		<div class="container">
-			<h3>Mail Us</h3>
-			<p class="est"></p>
+			<h3>Find Us</h3>
+			<!--<p class="est"></p>
 			<div class="mail-grids">
 				<div class="col-md-8 mail-grid-left animated wow slideInLeft" data-wow-delay=".5s">
 					<form>
@@ -87,7 +87,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 				</div>
 				<div class="clearfix"> </div>
-			</div>
+			</div>-->
 			<iframe class="animated wow slideInLeft" data-wow-delay=".5s" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.3519978970815!2d112.73190604338203!3d-7.282648574801768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fbec1dcf5005%3A0xab3ebc97eb9469ef!2sKlinik+Modern+Dasa+Medika!5e0!3m2!1sen!2sid!4v1512987651117" width="600" height="450" frameborder="0" style="border:0" allowfullscreen> </iframe>
 		</div>
 	</div>

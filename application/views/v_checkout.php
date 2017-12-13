@@ -51,7 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!-- checkout -->
 	<div class="checkout">
 		<div class="container">
-			<h3 class="animated wow slideInLeft" data-wow-delay=".5s">Your shopping cart contains: <span>3 Products</span></h3>
+			<h3 class="animated wow slideInLeft" data-wow-delay=".5s">Your shopping cart contains: <span><?php echo $this->cart->total_items();?> Products</span></h3>
 			<div class="checkout-right animated wow slideInUp" data-wow-delay=".5s">
 				<table class="timetable_sub">
 					<thead>
@@ -61,7 +61,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<th>Quantity</th>
 							<th>Price</th>
 							<th>Subtotal</th>
-							<th>Remove</th>
+							<!--<th>Remove</th>-->
 						</tr>
 					</thead>
 					<?php $i = 1; $total = 0?>
@@ -82,17 +82,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<td class="invert"><?= $items['qty'] ?></td>
 						<td class="invert">Rp. <?php echo $this->cart->format_number($items['price']); ?></td>
 						<td class="invert">Rp. <?php echo $this->cart->format_number($items['subtotal']); ?></td>
-						<td class="invert">
+						<!--<td class="invert">
 							<a href="<?php echo base_url()."dm_user/clear_cart/".$items['rowid']; ?>"><div class="rem">
 								<div class="close1"> </div>
 							</div></a>
-						</td>
+						</td>-->
 					</tr>
 					<?php $i++; ?>
 					<?php endforeach; ?>
 					<tfoot>
                         <tr>
-                            <td class="cart_total" colspan="5" align="right"><p class="cart_total_price">Total</p></td>
+                            <td class="cart_total" colspan="4" align="right"><p class="cart_total_price">Total</p></td>
                             <td class="cart_total" ><p class="cart_total_price">Rp. <?php echo $this->cart->format_number($this->cart->total()); ?></p></td>
                         </tr>
                     </tfoot>
@@ -103,7 +103,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<h4>Clear Cart</h4>
 				</div></a>
 				<div class="checkout-right-basket animated wow slideInRight" data-wow-delay=".5s">
-					<a href="single.html"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>Continue Shopping</a>
+					<a href="<?php echo base_url()."dm_user/products"; ?>"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>Continue Shopping</a>
 				</div>
 				<div class="clearfix"> </div>
 			</div>
