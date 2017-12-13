@@ -169,7 +169,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</div>	
 
 					<div class="form-group"> 
-						<button type="submit" class=" btn btn-primary">Check Out</button>
+						<button type="submit" class=" btn btn-primary" href="index.php/dm_user/v_upload_bukti">Check Out</button>
 					</div>     
 				</div>
 			</form>	

@@ -21,6 +21,17 @@ class user extends CI_Model{
     }
   }
 
+    function InsertData($tableName,$data){
+    $res = $this->db->insert($tableName, $data);
+    return $res;
+  }
+
+      function edit($data, $nama){
+      $this->db->where('id_order',$nama);
+      $this->db->update('invoice', $data);
+      return TRUE;
+
+  }
 
     public function getUser($where){
         $this->db->where('email', $where);
@@ -53,6 +64,11 @@ class user extends CI_Model{
             print 'Please Insert Unique email';
         }*/
         return $res;
+    }
+
+     function ambil_data(){
+    $data=$this->db->query('select * from invoice');
+     return $data->result_array();
     }
 
     public function masukData($data){

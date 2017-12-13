@@ -9,11 +9,14 @@ class Dm_user extends CI_Controller {
     $this->load->model('user');
         $this->load->helper(array('form','url'));
         $this->load->library('cart');
+        $this->load->model('user');
 	}
 
 	/*public function index(){
 		$this->load->view('v_login');
 	}*/
+
+
 
 	public function products(){
 		$this->load->helper('form');
@@ -42,12 +45,15 @@ class Dm_user extends CI_Controller {
 		$this->load->view('v_checkout');
 		$this->load->view('footer');
 	}
+
   public function forgot(){
 		$this->load->helper('form');
        	$this->load->view('header');
 		$this->load->view('v_forgot');
 		$this->load->view('footer');
 	}
+
+
 
   public function change(){
 		$this->load->helper('form');
@@ -87,9 +93,40 @@ class Dm_user extends CI_Controller {
     }
 
     public function invoice($no){
-    	echo "check out berhasil ".$no ;
-    	echo " DISINI TARUH VIEW UPLOAD BUKTI PEMBAYARAN";
+    $data = $this->user->ambil_data();
+    $this->load->view('header');
+    $this->load->view('v_upload_bukti', array('data' => $data), $no);
+    $this->load->view('footer');
     }
+
+  public function insert(){
+
+    $id_order = $_POST['id_order'];
+
+    $config['upload_path']         = './assets/img/bukti/';
+    $config['allowed_types']        = 'gif|jpg|png';
+    $config['max_size']             = 1000000;
+    $config['max_width']            = 1920;
+    $config['max_height']           = 1920;
+
+        $this->load->library('upload', $config);
+
+        $file1=('assets/img/bukti/'.$_FILES['file1']['name']);
+
+        $data_insert = array('id_order' => $id_order , 'image'=>$file1);
+                // $data_insert = array('id_barang'=>$id_barang, 'merk_barang' => $merk_barang, 'nama_barang' => $nama_barang , 'harga_barang' =>$harga_barang, 'deskripsi_barang'=>$deskripsi_barang, 'image'=>$file1);
+        $res = $this->user->edit($data_insert,$id_order);
+
+    if ( ! $this->upload->do_upload('file1')){
+     $poi=$this->upload->display_errors();
+      echo $poi;
+    }else{
+       if($res>=1){
+          redirect('');
+        }
+    }
+
+  }
 
     public function do_checkout(){
         $total_row = $this->m_barang->getNumRow('invoice');
