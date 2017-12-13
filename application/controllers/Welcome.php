@@ -30,6 +30,7 @@ class Welcome extends CI_Controller {
 		parent::__construct();		
 		$this->load->model('m_barang');
         $this->load->helper(array('form','url'));
+        $this->load->library('cart');
 	}
 
 	public function index(){

@@ -65,21 +65,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<th>Remove</th>
 						</tr>
 					</thead>
+					<?php $i = 1; $total = 0?>
+					<?php foreach ($this->cart->contents() as $items); $subtotal = $items['qty'] * $items['price'];
+                            $total += $subtotal;?>
 					<tr class="rem1">
-						<td class="invert">1</td>
+						<td class="invert"></td>
 						<td class="invert-image"><a href="single.html"><img src="images/22.jpg" alt=" " class="img-responsive" /></a></td>
 						<td class="invert">
 							 <div class="quantity"> 
 								<div class="quantity-select">                           
-									<div class="entry value-minus">&nbsp;</div>
-									<div class="entry value"><span>1</span></div>
-									<div class="entry value-plus active">&nbsp;</div>
+									<!--<div class="entry value-minus">&nbsp;</div>-->
+									<div class="entry value"><span><?= $items['qty'] ?></span></div>
+									<!--<div class="entry value-plus active">&nbsp;</div>-->
 								</div>
 							</div>
 						</td>
-						<td class="invert">Black Shoe</td>
-						<td class="invert">$5.00</td>
-						<td class="invert">$290.00</td>
+						<td class="invert"><?= $items['name'] ?></td>
+						<td class="invert"><?= $items['price'] ?></td>
+						<td class="invert"><?= $subtotal ?></td>
 						<td class="invert">
 							<div class="rem">
 								<div class="close1"> </div>
@@ -88,64 +91,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								$('.close1').on('click', function(c){
 									$('.rem1').fadeOut('slow', function(c){
 										$('.rem1').remove();
-									});
-									});	  
-								});
-						   </script>
-						</td>
-					</tr>
-					<tr class="rem2">
-						<td class="invert">2</td>
-						<td class="invert-image"><a href="single.html"><img src="images/30.jpg" alt=" " class="img-responsive" /></a></td>
-						<td class="invert">
-							 <div class="quantity"> 
-								<div class="quantity-select">                           
-									<div class="entry value-minus">&nbsp;</div>
-									<div class="entry value"><span>1</span></div>
-									<div class="entry value-plus active">&nbsp;</div>
-								</div>
-							</div>
-						</td>
-						<td class="invert">Centre Table</td>
-						<td class="invert">$5.00</td>
-						<td class="invert">$250.00</td>
-						<td class="invert">
-							<div class="rem">
-								<div class="close2"> </div>
-							</div>
-							<script>$(document).ready(function(c) {
-								$('.close2').on('click', function(c){
-									$('.rem2').fadeOut('slow', function(c){
-										$('.rem2').remove();
-									});
-									});	  
-								});
-						   </script>
-						</td>
-					</tr>
-					<tr class="rem3">
-						<td class="invert">3</td>
-						<td class="invert-image"><a href="single.html"><img src="images/11.jpg" alt=" " class="img-responsive" /></a></td>
-						<td class="invert">
-							 <div class="quantity"> 
-								<div class="quantity-select">                           
-									<div class="entry value-minus">&nbsp;</div>
-									<div class="entry value"><span>1</span></div>
-									<div class="entry value-plus active">&nbsp;</div>
-								</div>
-							</div>
-						</td>
-						<td class="invert">Stone Bangles</td>
-						<td class="invert">$5.00</td>
-						<td class="invert">$299.00</td>
-						<td class="invert">
-							<div class="rem">
-								<div class="close3"> </div>
-							</div>
-							<script>$(document).ready(function(c) {
-								$('.close3').on('click', function(c){
-									$('.rem3').fadeOut('slow', function(c){
-										$('.rem3').remove();
 									});
 									});	  
 								});
@@ -171,11 +116,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="checkout-left-basket animated wow slideInLeft" data-wow-delay=".5s">
 					<h4>Continue to basket</h4>
 					<ul>
-						<li>Product1 <i>-</i> <span>$250.00 </span></li>
+						<!--<li>Product1 <i>-</i> <span>$250.00 </span></li>
 						<li>Product2 <i>-</i> <span>$290.00 </span></li>
 						<li>Product3 <i>-</i> <span>$299.00 </span></li>
-						<li>Total Service Charges <i>-</i> <span>$15.00</span></li>
-						<li>Total <i>-</i> <span>$854.00</span></li>
+						<li>Total Service Charges <i>-</i> <span>$15.00</span></li>-->
+						<li>Total <i>-</i> <span><?= $total ?></span></li>
 					</ul>
 				</div>
 				<div class="checkout-right-basket animated wow slideInRight" data-wow-delay=".5s">
