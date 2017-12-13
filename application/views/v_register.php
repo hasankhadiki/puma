@@ -53,17 +53,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<div class="register">
 		<div class="container">
 			<h3 class="animated wow zoomIn" data-wow-delay=".5s">Register Here</h3>
+			<div class="col-sm-offset-1">
+					<h4 style="color: red" ><?=$this->session->flashdata('error')?></h4>
+			</div>
 			<p class="est animated wow zoomIn" data-wow-delay=".5s">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
 				deserunt mollit anim id est laborum.</p>
 			<div class="login-form-grids">
 				
 				<form class="animated wow slideInUp" data-wow-delay=".5s" 
-						method="POST" action="<?php echo site_url('auth/do_signup')?>">
+						method="POST" action="<?php echo site_url('auth/do_register')?>">
 				<h5 class="animated wow slideInUp" data-wow-delay=".5s">profile information</h5>
 					<input type="text" placeholder="First Name..." name="FirstName" required>
 					<input type="text" placeholder="Last Name..." name="LastName" required>
 				<h6 class="animated wow slideInUp" data-wow-delay=".5s">Login information</h6>
-					<input type="email" placeholder="Email Address" name="EmailAddress" required>
+					<input type="email" placeholder="Email Address" name="email" required>
 					<input type="password" placeholder="Password" name="Password" required=" " >
 					<input type="password" placeholder="Password Confirmation" name="ConfirmPassword" required=" " >
 				<!--	<div class="register-check-box">

@@ -21,6 +21,12 @@ class user extends CI_Model{
     }
   }
 
+
+    public function getUser($where){
+        $this->db->where('email', $where);
+        return $this->db->get('user')->row();
+    }
+
     public function masukkan($namatbl, $data){ //bikin akun
         $res = $this->db->insert($namatbl, $data);
         /*f (mysql_errno() == 1062) {
@@ -34,4 +40,16 @@ class user extends CI_Model{
       return $res;
     }
 
+    public function cekUnik($user){
+    $query = $this->db->select('*')
+      ->from('user')
+      ->where('email',$user)
+      // ->limit(1)
+      ->get();
+      if ($query->num_rows() == 0) {
+        return true;
+      }else{
+        return false;
+      }
+    }
 }
