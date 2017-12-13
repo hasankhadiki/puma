@@ -79,12 +79,12 @@ class dm_admin extends CI_Controller {
         redirect('index.php/dm_admin/layout');
     }
 
-  public function hapus($namaBarang){
+    public function hapus($idBarang){
 
-        $this->m_barang->delete($namaBarang);
+            $this->m_barang->delete($idBarang);
 
-        redirect('index.php/dm_admin/layout');
-	}
+            redirect('index.php/dm_admin/layout');
+    	}
 
 
 }
