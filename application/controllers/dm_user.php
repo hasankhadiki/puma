@@ -6,13 +6,17 @@ class Dm_user extends CI_Controller {
     function __construct(){
 		parent::__construct();
 		$this->load->model('m_barang');
+    $this->load->model('user');
         $this->load->helper(array('form','url'));
         $this->load->library('cart');
+        $this->load->model('user');
 	}
 
 	/*public function index(){
 		$this->load->view('v_login');
 	}*/
+
+
 
 	public function products(){
 		$this->load->helper('form');
@@ -41,12 +45,15 @@ class Dm_user extends CI_Controller {
 		$this->load->view('v_checkout');
 		$this->load->view('footer');
 	}
+
   public function forgot(){
 		$this->load->helper('form');
        	$this->load->view('header');
 		$this->load->view('v_forgot');
 		$this->load->view('footer');
 	}
+
+
 
   public function change(){
 		$this->load->helper('form');
@@ -86,9 +93,40 @@ class Dm_user extends CI_Controller {
     }
 
     public function invoice($no){
-    	echo "check out berhasil ".$no ;
-    	echo " DISINI TARUH VIEW UPLOAD BUKTI PEMBAYARAN";
+    $data = $this->user->ambil_data();
+    $this->load->view('header');
+    $this->load->view('v_upload_bukti', array('data' => $data), $no);
+    $this->load->view('footer');
     }
+
+  public function insert(){
+
+    $id_order = $_POST['id_order'];
+
+    $config['upload_path']         = './assets/img/bukti/';
+    $config['allowed_types']        = 'gif|jpg|png';
+    $config['max_size']             = 1000000;
+    $config['max_width']            = 1920;
+    $config['max_height']           = 1920;
+
+        $this->load->library('upload', $config);
+
+        $file1=('assets/img/bukti/'.$_FILES['file1']['name']);
+
+        $data_insert = array('id_order' => $id_order , 'image'=>$file1);
+                // $data_insert = array('id_barang'=>$id_barang, 'merk_barang' => $merk_barang, 'nama_barang' => $nama_barang , 'harga_barang' =>$harga_barang, 'deskripsi_barang'=>$deskripsi_barang, 'image'=>$file1);
+        $res = $this->user->edit($data_insert,$id_order);
+
+    if ( ! $this->upload->do_upload('file1')){
+     $poi=$this->upload->display_errors();
+      echo $poi;
+    }else{
+       if($res>=1){
+          redirect('');
+        }
+    }
+
+  }
 
     public function do_checkout(){
         $total_row = $this->m_barang->getNumRow('invoice');
@@ -118,6 +156,55 @@ class Dm_user extends CI_Controller {
             echo "<h2>Order gagal</h2>";
         }
     }
+
+    public function viewProfile(){
+            if($this->session->userdata('logged_in') != TRUE ){
+                $tes = $this->session->userdata('status');
+                $tes2 = $this->session->userdata('nama');
+                $this->load->view('header');
+                $this->load->view('v_home');
+               
+            }else{
+                $session = (string)($this->session->userdata('nama'));
+                $Email = $session;
+                $profil = $this->user->getProfile("where FirstName = '$session'");
+                $data = array(
+                        "FirstName" => $profil[0]['FirstName'],
+                        "LastName" => $profil[0]['LastName'],
+                        "Email" => $profil[0]['email'],
+                        
+                );
+                $this->load->view('header');
+                $this->load->view('v_viewprofile', $data);
+                
+            }
+        }
+
+      public function updateProfile(){
+            $this->form_validation->set_rules('FirstName', 'FirstName', 'required');
+            $this->form_validation->set_rules('LastName', 'LastName', 'required');
+            $this->form_validation->set_rules('Email', 'Email', 'required');
+                       //$session = (string)($this->session->userdata('Uname'));
+            $Username = $this->session->userdata('nama');
+            $session = (string)($this->session->userdata('nama'));
+            $user = $session;
+            
+            $this->load->helper('security');
+            $FirstName = $this->input->post('FirstName', true);
+            $LastName  = $this->input->post('LastName', true);
+            $Email = $this->input->post('Email', true);
+           
+            $data =array(
+                'FirstName' => $FirstName,
+                'LastName' => $LastName,
+                'Email' => $Email
+                
+                );
+                
+            $this->user->get_update($user, $data);
+            redirect('index.php/v_viewprofile'); }
+
+
 	// public function view($page = 'v_home')
  //    {
  //    	$data['title'] = ucfirst($page);

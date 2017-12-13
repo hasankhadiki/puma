@@ -7,8 +7,7 @@
 					<ul>
 						<li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="<?php echo base_url()."Auth/login";?>">Login</a></li>
 						<?php if($this->session->userdata('nama')) { ?>
-						<li><i class="glyphicon glyphicon-book" aria-hidden="true"></i><a href="<?php echo base_url()."Auth/logout";?>">Logout</a></li>	
-						<li><a href="<?php echo base_url()."dm_user/profile";?>">Hello, <?=$this->session->userdata('nama')?></a></li>
+						<li><a href="<?php echo base_url()."dm_user/viewProfile";?>">Hello, <?=$this->session->userdata('nama')?></a></li>
 						<?php }  ?>
 					</ul>
 				</div>
@@ -35,6 +34,7 @@
 							<li><a href="<?php echo base_url()."dm_user/products";?>">Products</a></li>
 							<li><a href="<?php echo base_url()."dm_user/mail";?>">Find Us</a></li>
 							<li><a href="<?php echo base_url()."dm_user/shortcodes";?>">short codes</a></li>
+							<li><a href="<?php echo base_url()."dm_user/viewProfile";?>">Profile</a></li>
 						</ul>
 					</div>
 					</nav>

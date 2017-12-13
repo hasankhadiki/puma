@@ -94,6 +94,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <a href="<?php echo base_url('index.php/dm_admin/layout');?>" class=" hvr-bounce-to-right"><i class="fa fa-th nav_icon"></i> <span class="nav-label">Produk</span> </a>
                     </li>
                     <li>
+                         <a href="<?php echo base_url('index.php/dm_admin/pemesanan');?>" class=" hvr-bounce-to-right"><i class="fa fa-th nav_icon"></i> <span class="nav-label">Pemesanan</span> </a>
+                     </li>
+                    <li>
                         <a href="<?php echo base_url('index.php/dm_admin/pelanggan');?>" class=" hvr-bounce-to-right"><i class="fa fa-th nav_icon"></i> <span class="nav-label">Pelanggan</span> </a>
                     </li>
                     <li>
