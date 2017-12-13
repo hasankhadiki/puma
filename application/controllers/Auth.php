@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Auth extends CI_Controller {
+class auth extends CI_Controller {
 
     function __construct(){
 
@@ -22,6 +22,14 @@ class Auth extends CI_Controller {
 
 public function forgot(){
   $email = $this->input->post('email');
+  $cek = $this->user->cekData($email);
+  if($cek==true){
+    redirect("dm_userchange");
+  }
+  else{
+    echo "Email yang anda masukkan tidak ditemukan";
+  }
+
 }
 
 public function change(){
