@@ -41,15 +41,6 @@ function login(){
 
 }
 
-public function forgot(){
-  $email = $this->input->post('email');
-}
-
-public function change(){
-  $password = $this->input->post('password');
-  $repassword = $this->input->post('password');
-}
-
 function logout(){
 	$this->session->unset_userdata('nama');
     $this->session->unset_userdata('status');

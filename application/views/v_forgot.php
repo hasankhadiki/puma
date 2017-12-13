@@ -59,7 +59,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<h3 class="animated wow zoomIn" data-wow-delay=".5s">Forgot Password</h3>
 			<p class="est animated wow zoomIn" data-wow-delay=".5s"></p>
 			<div class="login-form-grids animated wow slideInUp" data-wow-delay=".5s">
-				<form id="login-form" role="form" method="POST" action="<?php echo base_url('index.php/Autentifikasi/forgot');?>">
+				<form id="login-form" role="form" method="POST" action="<?php echo base_url('index.php/auth/forgot');?>">
 					<input type="email" placeholder="Email Address" required=" " >
 					<input type="submit" value="reset">
 				</form>
