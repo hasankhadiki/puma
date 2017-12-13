@@ -78,12 +78,7 @@ class Dm_user extends CI_Controller {
         $this->cart->remove($id);
         redirect(site_url()."/dm_user/checkout");
     }
-  public function forgot(){
-		$this->load->helper('form');
-       	$this->load->view('header');
-		$this->load->view('v_forgot');
-		$this->load->view('footer');
-	}
+
 	// public function view($page = 'v_home')
  //    {
  //    	$data['title'] = ucfirst($page);
