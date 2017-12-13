@@ -30,7 +30,7 @@ class m_barang extends CI_Model{
 	}
 
     function InsertData($tableName,$data){
-		$res = $this->db->insert($tableName,$data);
+		$res = $this->db->insert($tableName, $data);
 		return $res;
 	}
 
@@ -65,4 +65,12 @@ class m_barang extends CI_Model{
             return array();
         }
   }
+  public function getNumRow($tabel){
+        $hasil = $this->db->get($tabel);
+        if($hasil->num_rows() > 0){
+            return $hasil->num_rows();
+        } else{
+            return array();
+        }
+    }
 }

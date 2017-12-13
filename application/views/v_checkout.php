@@ -110,5 +110,72 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</div>
 	</div>
 <!-- //checkout -->
+
+<div class="mail animated wow zoomIn" data-wow-delay=".5s">
+		<div class="container">
+			<h3>Check Out</h3>
+		</div>
+	<!--Form PEMBAYARAN-->
+	
+		<div class="container signup-form" style="margin: 10px;">
+			<form role="#" action="<?php echo base_url()."dm_user/do_checkout"; ?>" method="post" enctype="multipart/form-data" >
+				<form>
+				<div class="col-md-4"></div>
+				<div class="col-md-7">
+					<div class="form-group"> 
+						<label for="full_name_id" class="control-label" >Your Name</label>
+						<input type="text" class="form-control" id="nama" name="nama" placeholder="Enter Your Name">
+					</div>	
+					<div class="form-group"> 
+						<label for="full_name_id" class="control-label">Phone Number</label>
+						<input type="text" class="form-control" id="no_telp" name="no_telp" placeholder="Enter Your Phone Number">
+					</div>
+					<div class="form-group"> 
+						<label for="full_name_id" class="control-label">Email</label>
+						<input type="text" class="form-control" id="email" name="email" placeholder="Enter Your Email">
+					</div>	
+					<div class="form-group"> 
+						<label for="full_name_id" class="control-label">Adress</label>
+						<input type="text" class="form-control" id="alamat" name="alamat" placeholder="Enter Your Adress">
+					</div>									
+						
+					<div class="form-group"> 
+						<label for="state_id" class="control-label">City</label>
+						<select class="form-control" id="kota" name="kota" >
+							<option>--Silahkan pilih--</option>
+							<option>Denpasar</option>
+							<option>Surabaya</option>
+							<option>Bandung</option>
+							<option>Jakarta</option>
+							<option>Solo</option>
+							<option>Yogyakarta</option>
+							<option>Malang</option>
+						</select>					
+					</div>
+
+					<!--<div class="form-group"> 
+						<label for="state_id" class="control-label">Metode Pembayaran</label>
+						<select name="metode" class="form-control" id="state_id">
+							<option>--Silahkan pilih--</option>
+							<option>JNE</option>
+							<option>TIKI</option>
+							<option>POS Indonesia</option>
+						</select>					
+					</div>-->
+	
+					<div class="form-group"> 
+						<label for="full_name_id" class="control-label">Total Pembayaran</label>
+						<input type="text" class="form-control" id="alamat" name="total" value="<?php echo $this->cart->total(); ?>" readonly>
+					</div>	
+
+					<div class="form-group"> 
+						<button type="submit" class=" btn btn-primary">Check Out</button>
+					</div>     
+				</div>
+			</form>	
+		</form>
+		</div>	
+	</div>	
+		<!--End Form PEMBAYARAN-->
 </body>
 </html>

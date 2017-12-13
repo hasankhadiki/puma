@@ -30,13 +30,6 @@ class Dm_user extends CI_Controller {
 		$this->load->view('footer');
 	}
 
-	public function register(){
-		$this->load->helper('form');
-       	$this->load->view('header');
-		$this->load->view('v_register');
-		$this->load->view('footer');
-	}
-
 	public function login(){
 		$this->load->helper('form');
        	$this->load->view('header');
@@ -97,6 +90,40 @@ class Dm_user extends CI_Controller {
     public function clear_cart_id($id){
         $this->cart->remove($id);
         redirect(site_url()."/dm_user/checkout");
+    }
+
+    public function invoice($no){
+    	echo "check out berhasil ".$no ;
+    	echo " DISINI TARUH VIEW UPLOAD BUKTI PEMBAYARAN";
+    }
+
+    public function do_checkout(){
+        $total_row = $this->m_barang->getNumRow('invoice');
+
+        $id_order = $total_row;
+         $nama = $_POST['nama'];
+         $email = $_POST['email'];
+         $no_telp = $_POST['no_telp'];
+         $alamat = $_POST['alamat'];
+         $total = $_POST['total'];
+         $status = 'unpaid';
+
+         $data_insert = array(
+         	'id_order' => $id_order,
+            'email' => $email,
+            'nama' => $nama,
+            'no_telp' => $no_telp,
+            'alamat' => $alamat,
+            'total' => $total,
+            'status' => $status
+            );
+        $res = $this->m_barang->InsertData('invoice', $data_insert);
+        if($res>=1){
+            redirect(base_url()."dm_user/invoice/".$id_order);
+            exit();
+        }else{
+            echo "<h2>Order gagal</h2>";
+        }
     }
 	// public function view($page = 'v_home')
  //    {
