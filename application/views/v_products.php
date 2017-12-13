@@ -134,11 +134,6 @@ foreach ($data as $x) { ?>
 														<div class="clearfix"> </div>
 													</div>
 												</div>
-												<h4><a href="single.html"><?php echo $x['nama_barang'];  ?></a></h4>
-												<p><?php echo $x['deskripsi_barang'];  ?></p>
-												<div class="new-collections-grid1-left simpleCart_shelfItem">
-													<p><i>$480</i> <span class="item_price">$ <?php echo $x['harga_barang'];  ?></span><a class="item_add" href="<?php echo site_url()."/dm_user/add_cart/".$x['id_barang']; ?>">add to cart</a></p>
-												</div>
 											</div>
 											<h4><a href="single.html"><?php echo $x['nama_barang'];  ?></a></h4>
 											<p><?php echo $x['deskripsi_barang'];  ?></p>
@@ -213,6 +208,7 @@ foreach ($data as $x) { ?>
 		</div>
 	</div>
 </div>
+
 
 <!-- Product Modal -->
 
