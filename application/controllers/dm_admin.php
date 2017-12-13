@@ -11,7 +11,7 @@ class dm_admin extends CI_Controller {
 	}
 
     public function index(){
-
+        $this->load->view('admin/v_admin_banner');
 		$this->load->view('admin/v_admin_index');
 	}
 

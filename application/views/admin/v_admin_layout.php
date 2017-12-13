@@ -77,8 +77,11 @@
                      <li>
                          <a href="<?php echo base_url('index.php/dm_admin/index');?>" class=" hvr-bounce-to-right"><i class="fa fa-dashboard nav_icon "></i><span class="nav-label">Dashboards</span> </a>
                      </li>
-                                         <li>
+                     <li>
                          <a href="<?php echo base_url('index.php/dm_admin/layout');?>" class=" hvr-bounce-to-right"><i class="fa fa-th nav_icon"></i> <span class="nav-label">Produk</span> </a>
+                     </li>
+                     <li>
+                         <a href="<?php echo base_url('Autentifikasi/Logout');?>" class=" hvr-bounce-to-right"><i class="fa fa-th nav_icon"></i> <span class="nav-label">Logout</span> </a>
                      </li>
                  </ul>
              </div>
