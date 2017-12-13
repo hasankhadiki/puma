@@ -53,4 +53,16 @@ class m_barang extends CI_Model{
       return TRUE;
 
   }
+
+  //ambil data barang berdasarkan id_barang untuk dimasukin ke cart
+  function get_barang($id){
+    $hasil = $this->db->where('id_barang', $id)
+                          ->limit(1)
+                          ->get('barang');
+        if($hasil->num_rows() > 0){
+            return $hasil->row();
+        } else {
+            return array();
+        }
+  }
 }

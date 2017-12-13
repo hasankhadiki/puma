@@ -7,6 +7,7 @@ class Dm_user extends CI_Controller {
 		parent::__construct();		
 		$this->load->model('m_barang');
         $this->load->helper(array('form','url'));
+        $this->load->library('cart');
 	}
 
 	/*public function index(){
@@ -43,10 +44,40 @@ class Dm_user extends CI_Controller {
 	}
 
 	public function checkout(){
+		$this->load->library('cart');
        	$this->load->view('header');
 		$this->load->view('v_checkout');
 		$this->load->view('footer');
 	}
+
+	public function shortcodes(){
+       	$this->load->view('header');
+		$this->load->view('v_short-codes');
+		$this->load->view('footer');
+	}
+
+	 public function add_cart($id_barang){
+        $product = $this->m_barang->get_barang($id_barang);
+        $data = array(
+                       'id'      => $product->id_barang,
+                       'name'    => $product->nama_barang,
+                       'qty'     => 1,
+                       'price'   => $product->harga_barang
+                    );
+        $this->cart->insert($data);
+        //echo $data;
+        redirect(base_url());
+    }
+
+    public function clear_cart(){
+        $this->cart->destroy();
+        redirect(site_url()."/dm_user/checkout");
+    }
+
+    public function clear_cart_id($id){
+        $this->cart->remove($id);
+        redirect(site_url()."/dm_user/checkout");
+    }
 	// public function view($page = 'v_home')
  //    {
  //    	$data['title'] = ucfirst($page);

@@ -31,6 +31,7 @@
 							<li class=""><a href="<?php echo base_url()."dm_user/home";?>" class="act">Home</a></li>
 							<li><a href="<?php echo base_url()."dm_user/products";?>">Products</a></li>
 							<li><a href="<?php echo base_url()."dm_user/mail";?>">Mail Us</a></li>
+							<li><a href="<?php echo base_url()."dm_user/shortcodes";?>">short codes</a></li>
 						</ul>
 					</div>
 					</nav>
@@ -55,6 +56,7 @@
 				</div>
 				<div class="header-right">
 					<div class="cart box_1">
+						
 						<a href="<?php echo base_url()."dm_user/checkout";?>">
 							<h3> <div class="total">
 								<span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</div>
