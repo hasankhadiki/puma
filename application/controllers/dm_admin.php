@@ -7,7 +7,7 @@ class dm_admin extends CI_Controller {
 
 		parent::__construct();
 		$this->load->model('m_barang');
-
+        $this->load->model('admin');
 	}
 
     public function index(){
@@ -20,6 +20,15 @@ class dm_admin extends CI_Controller {
         
 		$this->load->view('admin/v_admin_layout', array('data' => $data));
 	}
+
+    public function pelanggan(){
+        $data = $this->m_barang->ambil_user();
+        //$data = $this->admin->ambil_data('user');
+        $this->load->view('admin/v_admin_banner');
+        $this->load->view('admin/v_admin_pelanggan', array('data' => $data));
+        //echo $pengguna;
+
+    }
 
 	public function insert(){
 
@@ -80,12 +89,21 @@ class dm_admin extends CI_Controller {
         redirect('index.php/dm_admin/layout');
     }
 
+    function ubah_user(){
+    $nama = $_POST['nama'];
+    $email = $_POST['email'];
+    $level =  $_POST['level'];
+
+        $data = array('nama' => $nama , 'email' => $email, 'level' =>$level);
+
+        $this->m_barang->edit_user($data,$email);
+        redirect('index.php/dm_admin/pelanggan');
+    }
+
     public function hapus($idBarang){
 
             $this->m_barang->delete($idBarang);
 
             redirect('index.php/dm_admin/layout');
     	}
-
-
 }

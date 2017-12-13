@@ -18,6 +18,11 @@ class m_barang extends CI_Model{
 		$data=$this->db->query('select * from barang');
 	   return $data->result_array();
     }
+    //ambil data user
+    function ambil_user(){
+    $data=$this->db->query('select * from user');
+     return $data->result_array();
+    }
 
     function tampilkan(){
         $data=$this->db->query('SELECT * FROM (SELECT * FROM barang ORDER BY id_barang DESC LIMIT 3) as r ORDER BY id_barang');
@@ -50,6 +55,12 @@ class m_barang extends CI_Model{
     function edit($data, $nama){
       $this->db->where('nama_barang',$nama);
       $this->db->update('barang', $data);
+      return TRUE;
+
+  }
+  function edit_user($data, $email){
+      $this->db->where('email',$email);
+      $this->db->update('user', $data);
       return TRUE;
 
   }
