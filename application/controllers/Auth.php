@@ -101,7 +101,7 @@ class auth extends CI_Controller {
       if($level == 'user'){
         redirect('dm_user/home');
       }elseif ($level == 'admin') {
-        redirect('dm_admin/login');
+        redirect('dm_admin');
       }
     }else{
       $this->session->set_flashdata('error', 'maaf, username atau password ada yang salah!');
