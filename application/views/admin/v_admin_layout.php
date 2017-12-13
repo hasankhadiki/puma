@@ -125,7 +125,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				foreach($data as $x){
 				?>
 				<tr>
-					<td style="text-align: left;" id=i><?php $i++; echo $i; ?></td>
+					<td style="text-align: left;" id=i><?php echo $x['id_barang']; ?></td>
 					<td style="text-align: left;"><?php echo $x['nama_barang']; ?></td>
 					<td style="text-align: left;"><?php echo $x['merk_barang']; ?></td>
 					<td style="text-align: left;"><?php echo $x['harga_barang']; ?></td>
@@ -140,7 +140,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							data-deskripsi_barang="<?php echo $x['deskripsi_barang'] ?>"
 							data-image="<?php $x['image']; ?>"
     					data-toggle="modal" data-target="#modalEdit">
-    					<button  data-toggle="modal" data-target="#edit-data" class="btn btn-info">Ubah</button>
+    					<button style="width:100px" data-toggle="modal" data-target="#edit-data" class="btn btn-info">Ubah</button>
+						</a>
+						<a href="<?php base_url() ?>hapus/<?php echo $x['id_barang'] ?>">
+							<button style="width:100px" class="btn btn-warning">Hapus</button>
 						</a>
 
 						<div>

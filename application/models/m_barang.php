@@ -39,9 +39,9 @@ class m_barang extends CI_Model{
         return $res;
   }
 
-    function delete($nama){
+    function delete($id){
 
-          $this->db->where('nama_barang', $nama);
+          $this->db->where('id_barang', $id);
           $this->db->delete('barang');
   }
 
