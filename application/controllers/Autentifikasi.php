@@ -14,7 +14,7 @@ class Autentifikasi extends CI_Controller {
             $data['err_message'] = "";
             if($this->session->userdata('status') != "login"){
                 $this->load->view('admin/v_admin_signin', $data);
-            }else{ 
+            }else{
             //echo "YOU'RE ALREADY LOGGED IN";
                 redirect("dm_admin");
             }
@@ -39,6 +39,15 @@ function login(){
 		echo "gagal";
 	}
 
+}
+
+public function forgot(){
+  $email = $this->input->post('email');
+}
+
+public function change(){
+  $password = $this->input->post('password');
+  $repassword = $this->input->post('password');
 }
 
 function logout(){

@@ -48,7 +48,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 			<ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
 				<li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
-				<li class="active">Forgot Pasword Page</li>
+				<li class="active">Change Pasword Page</li>
 			</ol>
 		</div>
 	</div>
@@ -56,12 +56,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- login -->
 	<div class="forgot">
 		<div class="container">
-			<h3 class="animated wow zoomIn" data-wow-delay=".5s">Forgot Password</h3>
+			<h3 class="animated wow zoomIn" data-wow-delay=".5s">Change Password</h3>
 			<p class="est animated wow zoomIn" data-wow-delay=".5s"></p>
 			<div class="login-form-grids animated wow slideInUp" data-wow-delay=".5s">
-				<form id="login-form" role="form" method="POST" action="<?php echo base_url('index.php/Autentifikasi/forgot');?>">
-					<input type="email" placeholder="Email Address" required=" " >
-					<input type="submit" value="reset">
+				<form id="login-form" role="form" method="POST" action="<?php echo base_url('index.php/Autentifikasi/change');?>">
+					<input type="password" placeholder="Password" required=" " >
+          <input type="password" placeholder="Confirm Password" required=" " >
+					<input type="submit" value="Change">
 				</form>
 			</div>
 			<h4 class="animated wow slideInUp" data-wow-delay=".5s">For New People</h4>
@@ -70,5 +71,4 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 <!-- //login -->
 </body>
-</html>
 </html>

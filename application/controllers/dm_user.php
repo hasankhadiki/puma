@@ -7,7 +7,6 @@ class Dm_user extends CI_Controller {
 		parent::__construct();
 		$this->load->model('m_barang');
         $this->load->helper(array('form','url'));
-        $this->load->library('cart');
 	}
 
 	/*public function index(){
@@ -44,30 +43,31 @@ class Dm_user extends CI_Controller {
 	}
 
 	public function checkout(){
-		$this->load->library('cart');
        	$this->load->view('header');
 		$this->load->view('v_checkout');
 		$this->load->view('footer');
 	}
-
-	public function shortcodes(){
+  public function forgot(){
+		$this->load->helper('form');
        	$this->load->view('header');
-		$this->load->view('v_short-codes');
+		$this->load->view('v_forgot');
 		$this->load->view('footer');
 	}
 
-	 public function add_cart($id_barang){
-        $product = $this->m_barang->get_barang($id_barang);
-        $data = array(
-                       'id'      => $product->id_barang,
-                       'name'    => $product->nama_barang,
-                       'qty'     => 1,
-                       'price'   => $product->harga_barang
-                    );
-        $this->cart->insert($data);
-        //echo $data;
-        redirect(base_url());
-    }
+  public function change(){
+		$this->load->helper('form');
+       	$this->load->view('header');
+		$this->load->view('v_change');
+		$this->load->view('footer');
+	}
+	// public function view($page = 'v_home')
+ //    {
+ //    	$data['title'] = ucfirst($page);
+ //    	$this->load->view('header');
+ //    	$this->load->view($page, $data);
+ //    	$this->load->view('footer');
+ //    }
+}
 
     public function clear_cart(){
         $this->cart->destroy();
