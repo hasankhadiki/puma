@@ -79,7 +79,7 @@ class Dm_user extends CI_Controller {
                     );
         $this->cart->insert($data);
         //echo $data;
-        redirect(base_url());
+        redirect(base_url()."dm_user/products");
     }
 
     public function clear_cart(){

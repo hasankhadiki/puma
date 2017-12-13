@@ -30,7 +30,7 @@
 						<ul class="nav navbar-nav">
 							<li class=""><a href="<?php echo base_url()."dm_user/home";?>" class="act">Home</a></li>
 							<li><a href="<?php echo base_url()."dm_user/products";?>">Products</a></li>
-							<li><a href="<?php echo base_url()."dm_user/mail";?>">Mail Us</a></li>
+							<li><a href="<?php echo base_url()."dm_user/mail";?>">Find Us</a></li>
 							<li><a href="<?php echo base_url()."dm_user/shortcodes";?>">short codes</a></li>
 						</ul>
 					</div>
