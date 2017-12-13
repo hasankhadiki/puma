@@ -7,8 +7,41 @@ class auth extends CI_Controller {
 
 		parent::__construct();
 		$this->load->model('user');
+    $this->load->helper('form');
+    $this->load->view('header');
+    $this->load->view('v_login');
+    $this->load->view('footer');
 
 	}
+
+    public function do_signup(){
+
+    $firstname = $_POST['FirstName'];
+    $lastname = $_POST['LastName'];
+    $email = $_POST['EmailAddress'];
+    $password = $_POST['Password'];
+    $enpassword = sha1(md5($password));
+    $confpassword =$_POST['ConfirmPassword'];
+    $enconfpassword = sha1(md5($confpassword));
+    $data_insert = array(
+      'FirstName' => $firstname,
+      'LastName' => $lastname,
+      'EmailAddress' => $email,
+      'Password' => $enpassword,//sandi sudah di enkrip
+      'ConfirmPassword' => $enconfpassword,
+      'level' => "user"
+      );
+    $confpwd1 = $this->input->post('Password');
+    $confpwd2 = $this->input->post('ConfirmPassword');
+    if($confpwd1 == $confpwd2){ 
+      $res = $this->user->masukData($data_insert);
+      $this->load->view('v_register');
+        }
+    else{
+        echo 'password tidak sesuai';
+    }
+  }
+
 
 	function index(){
             $data['err_message'] = "";

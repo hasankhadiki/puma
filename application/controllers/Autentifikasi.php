@@ -7,7 +7,6 @@ class Autentifikasi extends CI_Controller {
 
 		parent::__construct();
 		$this->load->model('admin');
-
 	}
 
 	function index(){
@@ -20,7 +19,7 @@ class Autentifikasi extends CI_Controller {
             }
     }
 
-function login(){
+function login(){ //login admin
 	$email = $this->input->post('email');
 	$password = $this->input->post('password');
 	$where = array(

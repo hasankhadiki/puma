@@ -21,4 +21,17 @@ class user extends CI_Model{
     }
   }
 
+    public function masukkan($namatbl, $data){ //bikin akun
+        $res = $this->db->insert($namatbl, $data);
+        /*f (mysql_errno() == 1062) {
+            print 'Please Insert Unique email';
+        }*/
+        return $res;
+    }
+
+    public function masukData($data){
+      $res = $this->db->insert('user',$data);
+      return $res;
+    }
+
 }

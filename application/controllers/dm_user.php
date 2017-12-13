@@ -30,6 +30,13 @@ class Dm_user extends CI_Controller {
 		$this->load->view('footer');
 	}
 
+	public function register(){
+		$this->load->helper('form');
+       	$this->load->view('header');
+		$this->load->view('v_register');
+		$this->load->view('footer');
+	}
+
 	public function login(){
 		$this->load->helper('form');
        	$this->load->view('header');
