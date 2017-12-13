@@ -6,6 +6,7 @@ class Dm_user extends CI_Controller {
     function __construct(){
 		parent::__construct();
 		$this->load->model('m_barang');
+    $this->load->model('user');
         $this->load->helper(array('form','url'));
         $this->load->library('cart');
 	}
@@ -118,6 +119,55 @@ class Dm_user extends CI_Controller {
             echo "<h2>Order gagal</h2>";
         }
     }
+
+    public function viewProfile(){
+            if($this->session->userdata('logged_in') != TRUE ){
+                $tes = $this->session->userdata('status');
+                $tes2 = $this->session->userdata('nama');
+                $this->load->view('header');
+                $this->load->view('v_home');
+               
+            }else{
+                $session = (string)($this->session->userdata('nama'));
+                $Email = $session;
+                $profil = $this->user->getProfile("where FirstName = '$session'");
+                $data = array(
+                        "FirstName" => $profil[0]['FirstName'],
+                        "LastName" => $profil[0]['LastName'],
+                        "Email" => $profil[0]['email'],
+                        
+                );
+                $this->load->view('header');
+                $this->load->view('v_viewprofile', $data);
+                
+            }
+        }
+
+      public function updateProfile(){
+            $this->form_validation->set_rules('FirstName', 'FirstName', 'required');
+            $this->form_validation->set_rules('LastName', 'LastName', 'required');
+            $this->form_validation->set_rules('Email', 'Email', 'required');
+                       //$session = (string)($this->session->userdata('Uname'));
+            $Username = $this->session->userdata('nama');
+            $session = (string)($this->session->userdata('nama'));
+            $user = $session;
+            
+            $this->load->helper('security');
+            $FirstName = $this->input->post('FirstName', true);
+            $LastName  = $this->input->post('LastName', true);
+            $Email = $this->input->post('Email', true);
+           
+            $data =array(
+                'FirstName' => $FirstName,
+                'LastName' => $LastName,
+                'Email' => $Email
+                
+                );
+                
+            $this->user->get_update($user, $data);
+            redirect('index.php/v_viewprofile'); }
+
+
 	// public function view($page = 'v_home')
  //    {
  //    	$data['title'] = ucfirst($page);

@@ -27,6 +27,26 @@ class user extends CI_Model{
         return $this->db->get('user')->row();
     }
 
+    public function getProfile($data){
+        $data = $this->db->get('user '. $data);
+        return $data->result_array();
+    }
+
+    public function update_profile($user, $data){
+            $this->db->where('email', $user);
+            return $this->db->update('user', $data);
+     }
+
+    public function get_update($FirstName, $LastName, $Email){
+          //  $data = array('Uktp' => $Uktp, 'Uname' => $Uname, 'Uemail' => $Uemail, 'Uphone' => $Uphone, 'Uaddress' => $Uaddress);
+            $this->db->where('FirstName', $FirstName);
+            $this->db->where('LastName', $LastName);
+            $this->db->where('email', $Email);
+            
+            $query = $this->db->get('user');
+            return $query->num_rows();
+        }
+
     public function masukkan($namatbl, $data){ //bikin akun
         $res = $this->db->insert($namatbl, $data);
         /*f (mysql_errno() == 1062) {
