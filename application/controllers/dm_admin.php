@@ -11,13 +11,13 @@ class dm_admin extends CI_Controller {
 	}
 
     public function index(){
-        $this->load->view('admin/v_admin_banner');
+
 		$this->load->view('admin/v_admin_index');
 	}
 
 	public function layout(){
 		$data = $this->m_barang->ambil_data();
-        $this->load->view('admin/v_admin_banner');
+        
 		$this->load->view('admin/v_admin_layout', array('data' => $data));
 	}
 
