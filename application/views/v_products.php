@@ -109,43 +109,43 @@ foreach ($data as $x) { ?>
 
 			<div class="col-md-6">  	
 				<div class="new-collections-grid1 animated wow slideInUp" data-wow-delay=".5s">
-											<div class="new-collections-grid1-image">
-												<a href="single.html" class="product-image"><img src="<?php echo base_url().$x['image']; ?>" alt=" " class="img-responsive" /></a>
-												<div class="new-collections-grid1-image-pos">
-													<a data-toggle="modal" data-target="#Product-Modal<?php echo $i; ?>" href="">Quick View</a>
-												</div>
-												<div class="new-collections-grid1-right">
-													<div class="rating">
-														<div class="rating-left">
-															<img src="<?php echo base_url();?>assets/images/2.png" alt=" " class="img-responsive" />
-														</div>
-														<div class="rating-left">
-															<img src="<?php echo base_url();?>assets/images/2.png" alt=" " class="img-responsive" />
-														</div>
-														<div class="rating-left">
-															<img src="<?php echo base_url();?>assets/images/2.png" alt=" " class="img-responsive" />
-														</div>
-														<div class="rating-left">
-															<img src="<?php echo base_url();?>assets/images/2.png" alt=" " class="img-responsive" />
-														</div>
-														<div class="rating-left">
-															<img src="<?php echo base_url();?>assets/images/2.png" alt=" " class="img-responsive" />
-														</div>
-														<div class="clearfix"> </div>
-													</div>
-												</div>
-											</div>
-											<h4><a href="single.html"><?php echo $x['nama_barang'];  ?></a></h4>
-											<p><?php echo $x['deskripsi_barang'];  ?></p>
-											<div class="new-collections-grid1-left simpleCart_shelfItem">
-												<p><i>$480</i> <span class="item_price">$ <?php echo $x['harga_barang'];  ?></span><a class="item_add" href="#">add to cart </a></p>
-											</div>
-										</div>
-
-									<script src="<?php echo base_url();?>assets/js/jquery.countdown.js"></script>
-									<script src="<?php echo base_url();?>assets/js/script.js"></script>							
-									<div class="clearfix"> </div>
+					<div class="new-collections-grid1-image">
+						<a href="single.html" class="product-image"><img src="<?php echo base_url().$x['image']; ?>" alt=" " class="img-responsive" /></a>
+						<div class="new-collections-grid1-image-pos">
+							<a data-toggle="modal" data-target="#Product-Modal<?php echo $i; ?>" href="">Quick View</a>
+						</div>
+						<div class="new-collections-grid1-right">
+							<div class="rating">
+								<div class="rating-left">
+									<img src="<?php echo base_url();?>assets/images/2.png" alt=" " class="img-responsive" />
 								</div>
+								<div class="rating-left">
+									<img src="<?php echo base_url();?>assets/images/2.png" alt=" " class="img-responsive" />
+								</div>
+								<div class="rating-left">
+									<img src="<?php echo base_url();?>assets/images/2.png" alt=" " class="img-responsive" />
+								</div>
+								<div class="rating-left">
+									<img src="<?php echo base_url();?>assets/images/2.png" alt=" " class="img-responsive" />
+								</div>
+								<div class="rating-left">
+									<img src="<?php echo base_url();?>assets/images/2.png" alt=" " class="img-responsive" />
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+					</div>
+					<h4><a href="single.html"><?php echo $x['nama_barang'];  ?></a></h4>
+					<p><?php echo $x['deskripsi_barang'];  ?></p>
+					<div class="new-collections-grid1-left simpleCart_shelfItem">
+						<p><i>$480</i> <span class="item_price">$ <?php echo $x['harga_barang'];  ?></span><a class="item_add" href="<?php echo base_url()."dm_user/add_cart/".$x['id_barang']; ?>">add to cart </a></p>
+					</div>
+				</div>
+
+			<script src="<?php echo base_url();?>assets/js/jquery.countdown.js"></script>
+			<script src="<?php echo base_url();?>assets/js/script.js"></script>							
+			<div class="clearfix"> </div>
+		</div>
 
 <!-- Product Modal -->
         <div id="Product-Modal<?php echo $i; ?>" class="modal fade" role="dialog">

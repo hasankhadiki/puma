@@ -58,12 +58,13 @@
 					<div class="cart box_1">
 						
 						<a href="<?php echo base_url()."dm_user/checkout";?>">
-							<h3> <div class="total">
-								<span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</div>
+							<h3> <div class="total">Cart: 
+								<?php echo $this->cart->total_items();?>
+								<!--<span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)-->
+								items </div>
 								<img src="images/bag.png" alt="" />
 							</h3>
 						</a>
-						<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
 						<div class="clearfix"> </div>
 					</div>	
 				</div>

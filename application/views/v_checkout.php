@@ -56,73 +56,52 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<table class="timetable_sub">
 					<thead>
 						<tr>
-							<th>SL No.</th>	
-							<th>Product</th>
-							<th>Quality</th>
+							<th>No.</th>	
 							<th>Product Name</th>
-							<th>Service Charges</th>
+							<th>Quantity</th>
 							<th>Price</th>
+							<th>Subtotal</th>
 							<th>Remove</th>
 						</tr>
 					</thead>
 					<?php $i = 1; $total = 0?>
-					<?php foreach ($this->cart->contents() as $items); $subtotal = $items['qty'] * $items['price'];
-                            $total += $subtotal;?>
+					<?php foreach ($this->cart->contents() as $items): ?>
+                    <?php echo form_hidden($i.'[rowid]', $items['rowid']); ?>
 					<tr class="rem1">
-						<td class="invert"></td>
-						<td class="invert-image"><a href="single.html"><img src="images/22.jpg" alt=" " class="img-responsive" /></a></td>
+						<td class="invert"><?php echo $i; ?></td>
+						<td class="invert"><?php echo $items['name']; ?>
+                        <?php if ($this->cart->has_options($items['rowid']) == TRUE): ?>
+	                        <p>
+	                            <?php foreach ($this->cart->product_options($items['rowid']) as $option_name => $option_value): ?>
+
+	                                    <strong><?php echo $option_name; ?>:</strong> <?php echo $option_value; ?><br />
+
+	                            <?php endforeach; ?>
+	                        </p>
+                        <?php endif; ?></td>
+						<td class="invert"><?= $items['qty'] ?></td>
+						<td class="invert">Rp. <?php echo $this->cart->format_number($items['price']); ?></td>
+						<td class="invert">Rp. <?php echo $this->cart->format_number($items['subtotal']); ?></td>
 						<td class="invert">
-							 <div class="quantity"> 
-								<div class="quantity-select">                           
-									<!--<div class="entry value-minus">&nbsp;</div>-->
-									<div class="entry value"><span><?= $items['qty'] ?></span></div>
-									<!--<div class="entry value-plus active">&nbsp;</div>-->
-								</div>
-							</div>
-						</td>
-						<td class="invert"><?= $items['name'] ?></td>
-						<td class="invert"><?= $items['price'] ?></td>
-						<td class="invert"><?= $subtotal ?></td>
-						<td class="invert">
-							<div class="rem">
+							<a href="<?php echo base_url()."dm_user/clear_cart/".$items['rowid']; ?>"><div class="rem">
 								<div class="close1"> </div>
-							</div>
-							<script>$(document).ready(function(c) {
-								$('.close1').on('click', function(c){
-									$('.rem1').fadeOut('slow', function(c){
-										$('.rem1').remove();
-									});
-									});	  
-								});
-						   </script>
+							</div></a>
 						</td>
 					</tr>
-								<!--quantity-->
-									<script>
-									$('.value-plus').on('click', function(){
-										var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)+1;
-										divUpd.text(newVal);
-									});
-
-									$('.value-minus').on('click', function(){
-										var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)-1;
-										if(newVal>=1) divUpd.text(newVal);
-									});
-									</script>
-								<!--quantity-->
+					<?php $i++; ?>
+					<?php endforeach; ?>
+					<tfoot>
+                        <tr>
+                            <td class="cart_total" colspan="5" align="right"><p class="cart_total_price">Total</p></td>
+                            <td class="cart_total" ><p class="cart_total_price">Rp. <?php echo $this->cart->format_number($this->cart->total()); ?></p></td>
+                        </tr>
+                    </tfoot>
 				</table>
 			</div>
 			<div class="checkout-left">	
-				<div class="checkout-left-basket animated wow slideInLeft" data-wow-delay=".5s">
-					<h4>Continue to basket</h4>
-					<ul>
-						<!--<li>Product1 <i>-</i> <span>$250.00 </span></li>
-						<li>Product2 <i>-</i> <span>$290.00 </span></li>
-						<li>Product3 <i>-</i> <span>$299.00 </span></li>
-						<li>Total Service Charges <i>-</i> <span>$15.00</span></li>-->
-						<li>Total <i>-</i> <span><?= $total ?></span></li>
-					</ul>
-				</div>
+				<a href="<?php echo base_url()."dm_user/clear_cart"; ?>"><div class="checkout-left-basket animated wow slideInLeft" data-wow-delay=".5s">
+					<h4>Clear Cart</h4>
+				</div></a>
 				<div class="checkout-right-basket animated wow slideInRight" data-wow-delay=".5s">
 					<a href="single.html"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>Continue Shopping</a>
 				</div>
