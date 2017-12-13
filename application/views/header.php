@@ -13,7 +13,7 @@
 			</div>
 			<div class="logo-nav">
 				<div class="logo-nav-left animated wow zoomIn" data-wow-delay=".5s">
-					<h1><a href="index.html">P   u   m   a <span>Hearing Aid</span></a></h1>
+					<h1><a href="<?php echo base_url('index.php/dm_user/home');?>">P   u   m   a <span>Hearing Aid</span></a></h1>
 				</div>
 				<div class="logo-nav-left1">
 					<nav class="navbar navbar-default">
