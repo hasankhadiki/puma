@@ -5,8 +5,11 @@
 			<div class="header-grid">
 				<div class="header-grid-left animated wow slideInLeft" data-wow-delay=".5s">
 					<ul>
+						<?php if(!($this->session->userdata('nama'))) { ?>
 						<li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="<?php echo base_url()."Auth/login";?>">Login</a></li>
+						<?php }  ?>
 						<?php if($this->session->userdata('nama')) { ?>
+						<li><i class="glyphicon glyphicon-book" aria-hidden="true"></i><a href="<?php echo base_url()."Auth/logout";?>">Logout</a></li>	
 						<li><a href="<?php echo base_url()."dm_user/viewProfile";?>">Hello, <?=$this->session->userdata('nama')?></a></li>
 						<?php }  ?>
 					</ul>

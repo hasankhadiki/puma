@@ -57,6 +57,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="login">
 		<div class="container">
 			<h3 class="animated wow zoomIn" data-wow-delay=".5s">Login Form</h3>
+			<?php if($this->session->flashdata('error') == true) {?>
+			<div class="grid_3 grid_3 animated wow fadeInUp" align="center" data-wow-duration="1000ms" data-wow-delay="500ms">
+				<div class="alert alert-warning" role="alert">
+					<strong><?=$this->session->flashdata('error')?></strong>
+				</div>
+				<!--<h4 style="color: red" ><?=$this->session->flashdata('error')?></h4>-->
+			</div>
+			<?php } ?>
 			<p class="est animated wow zoomIn" data-wow-delay=".5s"></p>
 			<div class="login-form-grids animated wow slideInUp" data-wow-delay=".5s">
 				<form method="POST" action="<?php echo site_url('Auth/do_login')?>">

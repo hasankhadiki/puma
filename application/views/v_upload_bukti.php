@@ -64,7 +64,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<form method="POST" action="<?php echo base_url()."dm_user/insert"; ?>" enctype='multipart/form-data'>
 				<form>
 				<div class="col-md-7">
-
+					<?php if($this->session->flashdata('error') == true) {?>
+					<div class="grid_3 grid_3 animated wow fadeInUp" align="center" data-wow-duration="1000ms" data-wow-delay="500ms">
+					<div class="alert alert-warning" role="alert">
+						<strong><?=$this->session->flashdata('error')?></strong>
+					</div>
+					<!--<h4 style="color: red" ><?=$this->session->flashdata('error')?></h4>-->
+					</div>
+					<?php } ?>
 					<div class="form-group"> 
 						<label for="full_name_id" class="control-label" >Your Invoice Number</label>
 						<input type="text" class="form-control" id="id_order" name="id_order" placeholder="<?php echo $this->uri->segment(3); ?>" value="<?php echo $this->uri->segment(3); ?>">
