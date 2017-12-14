@@ -197,9 +197,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<a href="<?php base_url() ?>hapus/<?php echo $x['id_barang'] ?>">
 							<button style="width:100px" class="btn btn-warning">Hapus</button>
 						</a>
-
-						<div>
-
 					</td>
 				</tr>
 

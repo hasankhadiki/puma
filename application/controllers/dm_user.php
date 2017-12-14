@@ -28,20 +28,26 @@ class Dm_user extends CI_Controller {
 
 	public function home(){
 		$this->load->helper('form');
-       	$data = $this->m_barang->tampilkan();
-       	$this->load->view('header');
+    $data = $this->m_barang->tampilkan();
+    $this->load->view('header');
 		$this->load->view('v_home', array('data' => $data));
 		$this->load->view('footer');
 	}
 
 	public function mail(){
-       	$this->load->view('header');
+    $this->load->view('header');
 		$this->load->view('v_mail');
 		$this->load->view('footer');
 	}
 
+  public function shortcodes(){
+    $this->load->view('header');
+    $this->load->view('v_short-codes');
+    $this->load->view('footer');
+  }
+
 	public function checkout(){
-       	$this->load->view('header');
+    $this->load->view('header');
 		$this->load->view('v_checkout');
 		$this->load->view('footer');
 	}
@@ -116,19 +122,23 @@ class Dm_user extends CI_Controller {
         $data_insert = array('id_order' => $id_order , 'image'=>$file1);
                 // $data_insert = array('id_barang'=>$id_barang, 'merk_barang' => $merk_barang, 'nama_barang' => $nama_barang , 'harga_barang' =>$harga_barang, 'deskripsi_barang'=>$deskripsi_barang, 'image'=>$file1);
         $res = $this->user->edit($data_insert,$id_order);
-
     if ( ! $this->upload->do_upload('file1')){
      $poi=$this->upload->display_errors();
       echo $poi;
-    }else{
-       if($res>=1){
+    }elseif ($res>=1){
+        $this->cart->destroy();
           redirect('');
         }
     }
 
-  }
-
     public function do_checkout(){
+       if($this->session->userdata('logged_in') != TRUE ){
+        $this->session->set_flashdata('error', 'Maaf, anda belum login');
+                $this->load->view('header');
+                $this->load->view('v_login');
+                $this->load->view('footer');
+               
+            }else{
         $total_row = $this->m_barang->getNumRow('invoice');
 
         $id_order = $total_row;
@@ -155,14 +165,16 @@ class Dm_user extends CI_Controller {
         }else{
             echo "<h2>Order gagal</h2>";
         }
+      }
+        
     }
 
     public function viewProfile(){
             if($this->session->userdata('logged_in') != TRUE ){
-                $tes = $this->session->userdata('status');
-                $tes2 = $this->session->userdata('nama');
+                $this->session->set_flashdata('error', 'Maaf, anda belum login');
                 $this->load->view('header');
-                $this->load->view('v_home');
+                $this->load->view('v_login');
+                $this->load->view('footer');
                
             }else{
                 $session = (string)($this->session->userdata('email'));
