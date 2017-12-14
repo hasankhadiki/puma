@@ -168,7 +168,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<th>TOTAL</th>
 					<th>FOTO</th>
 					<th>STATUS</th>
-					<th>Bo'OL</th>
+					<th>Konfirmasi</th>
 					
 				</tr>
 				<?php $i=0; $j=0;
