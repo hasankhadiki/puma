@@ -8,12 +8,12 @@ class auth extends CI_Controller {
 		parent::__construct();
 		$this->load->model('user');
     $this->load->library('cart');
-    // Load form helper library 
-    $this->load->helper('form'); 
-    // Load form validation library 
-    $this->load->library('form_validation'); 
-    // Load session library 
-    $this->load->library('session'); 
+    // Load form helper library
+    $this->load->helper('form');
+    // Load form validation library
+    $this->load->library('form_validation');
+    // Load session library
+    $this->load->library('session');
 
 
 	}
@@ -27,7 +27,7 @@ class auth extends CI_Controller {
          }else{
          //echo "YOU'RE ALREADY LOGGED IN";
          redirect("dm_user/home");
-      }    
+      }
   }
 
   function register(){
@@ -61,7 +61,7 @@ class auth extends CI_Controller {
         );
       //$confpwd1 = $this->input->post('Password');
       //$confpwd2 = $this->input->post('ConfirmPassword');
-      if($enpassword == $enconfpassword){ 
+      if($enpassword == $enconfpassword){
         $res = $this->user->masukData($data_insert);
         $this->load->view('header');
         $this->load->view('v_login');
@@ -96,6 +96,7 @@ class auth extends CI_Controller {
       );
       $level = $data['level'];
 
+
       $this->session->set_userdata($data);
 
       if($level == 'user'){
@@ -107,13 +108,13 @@ class auth extends CI_Controller {
       $this->session->set_flashdata('error', 'maaf, username atau password ada yang salah!');
       redirect('Auth/login');
     }
-  }
 
   public function forgot(){
     $email = $this->input->post('email');
     $cek = $this->user->cekData($email);
     if($cek==true){
-      redirect("dm_userchange");
+      $this->session->set_userdata('data_email_chg_pass', array('email'=>$email));
+      redirect("dm_userchange/change");
     }
     else{
       echo "Email yang anda masukkan tidak ditemukan";
@@ -131,8 +132,15 @@ class auth extends CI_Controller {
 
   public function change(){
     $password = $this->input->post('password');
-    $repassword = $this->input->post('password');
+    $email = $this->session->set_userdata('data_email_chg_pass')['email'];
+    if(!empty($password)){
+      this->user->changePass($email, $password);
+      redirect("dm_user/home");
+
+    }
+    
   }
+
 
 
 }

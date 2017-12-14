@@ -61,7 +61,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="login-form-grids animated wow slideInUp" data-wow-delay=".5s">
 				<form id="login-form" role="form" method="POST" action="<?php echo base_url('index.php/auth/change');?>">
 					<input type="password" placeholder="Password" required=" " >
-          <input type="password" placeholder="Confirm Password" required=" " >
 					<input type="submit" value="Change">
 				</form>
 			</div>
