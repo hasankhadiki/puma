@@ -66,9 +66,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<form method="post">
 						<input type="text" name="FirstName" id="FirstName" value="<?php echo $FirstName; ?>" required="">
 						<input type="text" name="LastName" id="LastName" value="<?php echo $LastName; ?>" required="">
-						<input type="email" name="Email" id="Email" value="<?php echo $Email; ?>" required="">
+						<input type="email" name="Email" id="Email" value="<?php echo $Email; ?>" readonly>
 						
 						<input type="submit" value="Submit Now" >
+						
 					</form>
 					<?php echo form_close(); ?>
 				</div>

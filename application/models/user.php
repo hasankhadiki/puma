@@ -48,7 +48,12 @@ class user extends CI_Model{
             return $this->db->update('user', $data);
      }
 
-    public function get_update($FirstName, $LastName, $Email){
+     public function update_profiletest($where, $data){
+            $this->db->where($where);
+            return $this->db->update('user', $data);
+     }
+
+    public function get_update($FirstName){
           //  $data = array('Uktp' => $Uktp, 'Uname' => $Uname, 'Uemail' => $Uemail, 'Uphone' => $Uphone, 'Uaddress' => $Uaddress);
             $this->db->where('FirstName', $FirstName);
             $this->db->where('LastName', $LastName);

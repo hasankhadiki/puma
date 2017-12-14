@@ -6,6 +6,7 @@ class dm_admin extends CI_Controller {
     function __construct(){
 
 		parent::__construct();
+        $this->load->model('admin');
 		$this->load->model('m_barang');
         $this->load->model('user');
 
@@ -95,5 +96,9 @@ class dm_admin extends CI_Controller {
             redirect('index.php/dm_admin/layout');
     	}
 
-
+    public function change_status_order($id){
+        $status = 'paid';
+        $this->admin->update_status($id, $status);
+        $this->pemesanan();
+      }
 }

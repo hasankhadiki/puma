@@ -13,5 +13,15 @@ class admin extends CI_Model{
  	return $this->db->get_where($table,$where);
  }
 
+ 	function ambil_data($id){
+		$query = $this->db->get();
+		return $query->result();
+ 	}
+
+ 	function update_status($id, $status){
+ 		$this->db->where('id_order', $id)
+ 				 ->set('status', $status)
+        		 ->update('invoice');
+ 	}
  
 }
