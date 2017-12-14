@@ -21,8 +21,8 @@ class user extends CI_Model{
     }
   }
   public function changePass($email, $pass){
-    this->db->where('EmailAddress', $email);
-    this->db->update('Password', $pass)
+    $this->db->where('EmailAddress', $email);
+    $this->db->update('Password', $pass);
   }
 
 

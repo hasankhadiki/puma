@@ -108,6 +108,7 @@ class auth extends CI_Controller {
       $this->session->set_flashdata('error', 'maaf, username atau password ada yang salah!');
       redirect('Auth/login');
     }
+  }
 
   public function forgot(){
     $email = $this->input->post('email');
@@ -134,7 +135,7 @@ class auth extends CI_Controller {
     $password = $this->input->post('password');
     $email = $this->session->set_userdata('data_email_chg_pass')['email'];
     if(!empty($password)){
-      this->user->changePass($email, $password);
+      $this->user->changePass($email, $password);
       redirect("dm_user/home");
 
     }
