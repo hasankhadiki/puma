@@ -20,6 +20,11 @@ class user extends CI_Model{
       return false;
     }
   }
+  public function changePass($email, $pass){
+    $this->db->where('EmailAddress', $email);
+    $this->db->update('Password', $pass);
+  }
+
 
     function InsertData($tableName,$data){
     $res = $this->db->insert($tableName, $data);
@@ -48,12 +53,17 @@ class user extends CI_Model{
             return $this->db->update('user', $data);
      }
 
-    public function get_update($FirstName, $LastName, $Email){
+     public function update_profiletest($where, $data){
+            $this->db->where($where);
+            return $this->db->update('user', $data);
+     }
+
+    public function get_update($FirstName){
           //  $data = array('Uktp' => $Uktp, 'Uname' => $Uname, 'Uemail' => $Uemail, 'Uphone' => $Uphone, 'Uaddress' => $Uaddress);
             $this->db->where('FirstName', $FirstName);
             $this->db->where('LastName', $LastName);
             $this->db->where('email', $Email);
-            
+
             $query = $this->db->get('user');
             return $query->num_rows();
         }

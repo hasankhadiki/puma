@@ -179,6 +179,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<th>TOTAL</th>
 					<th>FOTO</th>
 					<th>STATUS</th>
+					<th>Konfirmasi</th>
 					
 				</tr>
 				<?php $i=0; $j=0;
@@ -189,6 +190,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<td style="text-align: left;"><?php echo $x['total']; ?></td>
 					<td style="text-align: left; max-width: 220px;"><img style="max-width: 100%; height: auto" src="<?php echo base_url().$x['image']; ?>"></td>
 					<td style="text-align: left;"><?php echo $x['status']; ?></td>
+					<td><a href="<?php echo base_url().'dm_admin/change_status_order/'.$x['id_order']; ?>">
+                      <button type="button" class="btn btn-outline btn-primary btn-sm">Ubah Status</button>
+                    </a></td>
 				</tr>
 
 </div>

@@ -177,9 +177,9 @@ class Dm_user extends CI_Controller {
                 $this->load->view('footer');
                
             }else{
-                $session = (string)($this->session->userdata('nama'));
+                $session = (string)($this->session->userdata('email'));
                 $Email = $session;
-                $profil = $this->user->getProfile("where FirstName = '$session'");
+                $profil = $this->user->getProfile("where email = '$session'");
                 $data = array(
                         "FirstName" => $profil[0]['FirstName'],
                         "LastName" => $profil[0]['LastName'],
@@ -212,9 +212,12 @@ class Dm_user extends CI_Controller {
                 'Email' => $Email
                 
                 );
-                
-            $this->user->get_update($user, $data);
-            redirect('index.php/v_viewprofile'); }
+            $email = $_POST['Email'];
+
+            $where = "email = "."'".$email."'";
+                      
+            $this->user->update_profiletest($where, $data);
+            redirect('dm_user/viewProfile'); }
 
 
 	// public function view($page = 'v_home')

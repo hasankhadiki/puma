@@ -22,5 +22,13 @@ class admin extends CI_Model{
     	}
     }
 
+
+
+
+ 	function update_status($id, $status){
+ 		$this->db->where('id_order', $id)
+ 				 ->set('status', $status)
+        		 ->update('invoice');
+ 	}
  
 }
