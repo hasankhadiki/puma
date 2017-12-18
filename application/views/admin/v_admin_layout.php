@@ -91,7 +91,7 @@
          </nav>
  		 <div id="page-wrapper" class="gray-bg dashbard-1">
         <div class="content-main">
-=======
+
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
