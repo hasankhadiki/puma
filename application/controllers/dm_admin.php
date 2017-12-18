@@ -30,6 +30,15 @@ class dm_admin extends CI_Controller {
 		$this->load->view('admin/v_admin_layout', array('data' => $data));
 	}
 
+    public function pelanggan(){
+        $data = $this->m_barang->ambil_user();
+        //$data = $this->admin->ambil_data('user');
+        $this->load->view('admin/v_admin_banner');
+        $this->load->view('admin/v_admin_pelanggan', array('data' => $data));
+        //echo $pengguna;
+
+    }
+
 	public function insert(){
 
 		// $id_barang = $_POST['id_barang'];
@@ -64,6 +73,7 @@ class dm_admin extends CI_Controller {
 		}
 
   }
+
 
   function ubah(){
     $nama_barang = $_POST['nama_barang'];
@@ -101,4 +111,15 @@ class dm_admin extends CI_Controller {
         $this->admin->update_status($id, $status);
         $this->pemesanan();
       }
+
+    function ubah_user(){
+    $nama = $_POST['nama'];
+    $email = $_POST['email'];
+    $level =  $_POST['level'];
+
+        $data = array('nama' => $nama , 'email' => $email, 'level' =>$level);
+
+        $this->m_barang->edit_user($data,$email);
+        redirect('index.php/dm_admin/pelanggan');
+    }
 }

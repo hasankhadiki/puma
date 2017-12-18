@@ -23,6 +23,10 @@ class admin extends CI_Model{
     }
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 
  	function update_status($id, $status){
  		$this->db->where('id_order', $id)
