@@ -52,6 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<div class="checkout">
 		<div class="container">
 			<h3 class="animated wow slideInLeft" data-wow-delay=".5s">Your shopping cart contains: <span><?php echo $this->cart->total_items();?> Products</span></h3>
+			
 			<div class="checkout-right animated wow slideInUp" data-wow-delay=".5s">
 				<table class="timetable_sub">
 					<thead>
@@ -79,14 +80,50 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	                            <?php endforeach; ?>
 	                        </p>
                         <?php endif; ?></td>
-						<td class="invert"><?= $items['qty'] ?></td>
+						<!--<?= $items['qty'] ?>-->
+						<td class="invert" align="center">
+							<form role="#" action="<?php echo base_url()."dm_user/updatecart/".$items['rowid']; ?>" method="post" enctype="multipart/form-data" >
+							<div class="form-group">
+							<input type="number" name="qty" id="qty" value="<?php echo $items['qty']; ?>">
+							<button type="submit" class=" btn btn-primary" href="<?php echo base_url()."dm_user/add_cart/".$items['rowid']; ?>">Refresh</button>
+							</div>
+							</form>
+							<!--<div class="input-group">
+          						<span class="input-group-btn">
+             						<button type="button" class="btn btn-default btn-number" data-type="minus" data-field="quant[1]">
+                  						<span class="glyphicon glyphicon-minus" href="index.php/dm_user/kurangq"></span>
+              						</button>
+         	 					</span>
+          						<input type="text" name="quant[1]" class="form-control input-number" value=<?php echo $items['qty']; ?> min="1" max="10">
+          						<span class="input-group-btn">
+              						<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+                  						<span class="glyphic<?php echo $items['name']; ?> glyphicon-plus"></span>
+              						</button>
+          						</span>
+     						</div>-->
+							 <!--<div class="quantity"> 
+								<div class="quantity-select">                           
+									
+								</div>
+							</div>-->
+						</td>
 						<td class="invert">Rp. <?php echo $this->cart->format_number($items['price']); ?></td>
 						<td class="invert">Rp. <?php echo $this->cart->format_number($items['subtotal']); ?></td>
-						<!--<td class="invert">
-							<a href="<?php echo base_url()."dm_user/clear_cart/".$items['rowid']; ?>"><div class="rem">
-								<div class="close1"> </div>
-							</div></a>
-						</td>-->
+						<!--quantity-->
+									<!--<script>
+									$('.value-plus').on('click', function(){
+										var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)+1;
+										divUpd.text(newVal);
+										<?php $items['qty'] += $items['qty'] ?>
+									});
+
+									$('.value-minus').on('click', function(){
+										var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)-1;
+										<?php $items['qty'] -= $items['qty'] ?>
+										if(newVal>=1) divUpd.text(newVal);
+									});
+									</script>-->
+								<!--quantity-->
 					</tr>
 					<?php $i++; ?>
 					<?php endforeach; ?>
@@ -99,6 +136,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</table>
 			</div>
 			<div class="checkout-left">	
+				
 				<a href="<?php echo base_url()."dm_user/clear_cart"; ?>"><div class="checkout-left-basket animated wow slideInLeft" data-wow-delay=".5s">
 					<h4>Clear Cart</h4>
 				</div></a>

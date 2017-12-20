@@ -16,12 +16,58 @@ class Dm_user extends CI_Controller {
 		$this->load->view('v_login');
 	}*/
 
+  function tambahq($rowid){
+    $q = $items['qty'] + 1;
+    $vars = array('rowid' => $rowid, 'qty' => $q );
+    var_dump($this->cart->update($vars));
+    $this->load->view('header');
+    $this->load->view('v_checkout');
+    $this->load->view('footer');
 
+  }
+
+  function updatecart($rowid){
+    $row_id = $rowid;
+    $qty = $this->input->post('qty');
+    $data = array(
+        'rowid'   => $rowid,
+        'qty'     => $qty
+    );
+    $this->cart->update($data);
+    $this->load->view('header');
+    $this->load->view('v_checkout');
+    $this->load->view('footer');
+  }
+
+  function kurangq($rowid){
+    $q = $items['qty'] - 1;
+    $vars = array('rowid' => $rowid, 'qty' => $q );
+    var_dump($this->cart->update($vars));
+    $this->load->view('header');
+    $this->load->view('v_checkout');
+    $this->load->view('footer');
+  }
+
+  function email(){
+    $config = Array(
+      'protocol' => 'smtp',
+      'smtp_host' => 'ssl://smtp.gmail.com',
+      'smtp_user' => 'jannaher98@gmail.com',
+      'smtp_pass' => 'secret05!',
+      );
+    $email = $this->input->post('email');
+    $this->load->library('email', $config);
+    $this->email->to('$email');
+    $this->email->from('jannaher98@gmail.com','Admin');
+    $this->email->subject('Forgot Password');
+    $this->email->message('your new password is 12345678');
+    $this->email->set_newline("\r\n");
+  }
 
 	public function products(){
 		$this->load->helper('form');
        	$data = $this->m_barang->tampilkan();
-       	$this->load->view('header');
+    $this->load->view('header');
 		$this->load->view('v_products', array('data' => $data));
 		$this->load->view('footer');
 	}
