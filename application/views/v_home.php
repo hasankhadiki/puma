@@ -116,7 +116,7 @@ foreach ($data as $x) { ?>
 											<h4><a href="single.html"><?php echo $x['nama_barang'];  ?></a></h4>
 											<p><?php echo $x['deskripsi_barang'];  ?></p>
 											<div class="new-collections-grid1-left simpleCart_shelfItem">
-												<p><i>$480</i> <span class="item_price">$ <?php echo $x['harga_barang'];  ?></span><a class="item_add" href="<?php echo base_url()."dm_user/add_cart/".$x['id_barang']; ?>">add to cart </a></p>
+												<p><i>$480</i> <span class="item_price"><?php echo "Rp. " . number_format(sprintf('%0.2f', preg_replace("/[^0-9.]/", "", $x['harga_barang'])), 2);?></span><a class="item_add" href="<?php echo base_url()."dm_user/add_cart/".$x['id_barang']; ?>">add to cart </a></p>
 											</div>
 										</div>
 

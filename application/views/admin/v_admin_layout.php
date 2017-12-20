@@ -89,6 +89,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <li>
                          <a href="<?php echo base_url('index.php/dm_admin/pemesanan');?>" class=" hvr-bounce-to-right"><i class="fa fa-th nav_icon"></i> <span class="nav-label">Pemesanan</span> </a>
                      </li>
+<<<<<<< HEAD
+                     <li>
+                         <a href="<?php echo base_url('Autentifikasi/Logout');?>" class=" hvr-bounce-to-right"><i class="fa fa-th nav_icon"></i> <span class="nav-label">Logout</span> </a>
+                     </li>
+                 </ul>
+             </div>
+ 			</div>
+         </nav>
+ 		 <div id="page-wrapper" class="gray-bg dashbard-1">
+        <div class="content-main">
+
+=======
                     <li>
                         <a href="<?php echo base_url('index.php/dm_admin/pelanggan');?>" class=" hvr-bounce-to-right"><i class="fa fa-th nav_icon"></i> <span class="nav-label">Pelanggan</span> </a>
                     </li>
@@ -103,6 +115,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div id="page-wrapper" class="gray-bg dashbard-1">
        <div class="content-main">
 =======
+>>>>>>> master
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
